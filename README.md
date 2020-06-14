@@ -1,2 +1,1 @@
-# hendrikkels.github.io
-Website
+# Git Gud Scrub
