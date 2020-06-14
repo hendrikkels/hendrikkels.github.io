@@ -4,7 +4,6 @@ function getIP(){
         .then((json) => {
             return document.getElementById("ip_address").innerHTML = json.ip;
         })
-    return json.ip;
 }
 
 function getLocation() {
