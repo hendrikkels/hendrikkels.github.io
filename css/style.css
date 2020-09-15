@@ -12,14 +12,3 @@ hr {
 	background-color: black;
 	border: none;
 }
-
-.dark-mode {
-	background-color: black;
-	color: white;
-	
-}
-
-.dark-mode hr{
-	background-color: white;
-	border: none;
-}
