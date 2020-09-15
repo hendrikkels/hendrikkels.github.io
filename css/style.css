@@ -1,5 +1,25 @@
 
 html, body {
 	height: 100%;
-	font-family: 'Inconsolata', monospace;
+	/* font-family: 'Inconsolata', monospace; */
+	/* font-family: 'Open Sans Condensed', sans-serif; */
+	/* font-family: 'Ramabhadra', sans-serif; */
+	font-family: 'Roboto', sans-serif;
+}
+
+hr {
+	height: 0.4rem;
+	background-color: black;
+	border: none;
+}
+
+.dark-mode {
+	background-color: black;
+	color: white;
+	
+}
+
+.dark-mode hr{
+	background-color: white;
+	border: none;
 }
