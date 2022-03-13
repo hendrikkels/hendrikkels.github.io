@@ -6,39 +6,35 @@
          url('../fonts/arialic_hollow-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
-/*  
-	CSS Reset by Eric Meyer - Released under Public Domain
-    http://meyerweb.com/eric/tools/css/reset/
-*/
-
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
 	color: #000;
 	background-color: #fff;
-	font-family: Arial;
+	font-family: 'JetBrainsMono';
+}
+
+.container-md {
+	padding-left: 40px;
+	padding-right: 40px;
+	max-width: 1024px;
 }
 
 a {
 	text-decoration: none;
-	color: #1883ba;
-}
-
-.container {
-	padding-top: 1em;
-	display: flex;
-	flex-direction: column;
-	/* align-items: center; */
-	padding-left: 4em;
-	padding-right: 4em;
+	color: #0083c5;
 }
 
 li {
 	font-size: 0.75em;
 }
-
 
 .img-container {
 	display: flex;
@@ -53,64 +49,117 @@ img {
 }
 
 h1{
-	font-size: 8vw;
-	font-weight: normal;
+	font-size: 6em;
+	font-weight: bold;
 	font-style: normal;
-	font-family: 'arialic_hollowregular';
+	font-family: 'JetBrainsMono';
 	text-align: center;
+	margin-bottom: 20px;
 }
 
 h2{
 	font-size: 2em;
 	font-weight: bold;
 	font-style: normal;
-	font-family: 'Arial', sans-serif;
+	font-family: 'JetBrainsMono', sans-serif;
 	text-align: center;
+	color: #1883ba;
+	margin-bottom: 20px;
 }
 
 h3{
-	font-size: 0.75em;
-	font-weight: normal;
+	font-size: 1em;
+	font-weight: bold;
 	font-style: normal;
-	font-family: 'Arial', sans-serif;
+	font-family: 'JetBrainsMono', sans-serif;
 	text-align: center;
 	padding-left: 6em;
 	padding-right: 6em;
 }
 
 h4{
-	margin-top: 2em;
-	font-size: 1em;
+	font-size: 1.25em;
 	font-weight: bold;
 	font-style: normal;
-	font-family: 'Arial', sans-serif;
+	font-family: 'JetBrainsMono', sans-serif;
+	margin-bottom: 10px;
 }
 
 p {
-
 	font-size: 0.75em;
 	font-weight: normal;
 	font-style: normal;
-	/* font-family: 'arialic_hollowregular'; */
+	font-family: 'JetBrainsMono';
 }
 
-@media only screen and (max-width: 768px) {
-	container {
-		padding-left: 1em;
-		padding-right: 1em;
+.section{
+	margin-bottom: 20px;
+}
+  
+  span {
+	border-bottom: .05em solid;
+	animation: caret 1s steps(1) infinite;
+  }
+  
+  @keyframes caret {
+	50% {
+	  border-color: transparent;
+	}
+  }
+
+@media only screen and (max-width: 1400px) {
+	h1 {
+		font-size: 5em;
+		/* word-spacing: 100vw; */
 	}
 	
 	h2 {
-		font-size: 1em;
-	}
-
-	h3 {
-		padding-left: 2em;
-		padding-right: 2em;
+		font-size: 2em;
 	}
 
 	img {
 		width: 100%
 	}
+}
 
+@media only screen and (max-width: 768px) {
+
+	h1 {
+		font-size: 4em;
+		word-spacing: 100vw;
+	}
+	
+	h2 {
+		font-size: 1.5em;
+	}
+
+	img {
+		width: 100%
+	}
+}
+
+@media only screen and (max-width: 480px) {
+
+	h1 {
+		font-size: 3em;
+		word-spacing: 100vw;
+	}
+	
+	h2 {
+		font-size: 1.5em;
+	}
+
+	h4 {
+		font-size: 1.5em;
+	}
+	p {
+		font-size: 1em;
+	}
+	li {
+		font-size: 1em;
+	}
+
+	img {
+		width: 100%
+	}
 }
