@@ -18,7 +18,7 @@
 body {
 	color: #000;
 	background-color: #fff;
-	font-family: 'JetBrainsMono';
+	font-family:Arial, Helvetica, sans-serif
 }
 
 .container-md {
@@ -28,6 +28,7 @@ body {
 }
 
 a {
+	font-family: 'JetBrainsMono';
 	text-decoration: none;
 	color: #0083c5;
 }
@@ -56,7 +57,7 @@ h1{
 	font-size: 5em;
 	font-weight: bold;
 	font-style: normal;
-	font-family: 'JetBrainsMono';
+	/* font-family: 'Arial'; */
 	text-align: center;
 	margin-bottom: 20px;
 }
@@ -65,7 +66,7 @@ h2{
 	font-size: 2em;
 	font-weight: bold;
 	font-style: normal;
-	font-family: 'JetBrainsMono', sans-serif;
+	/* font-family: 'Arial', sans-serif; */
 	text-align: center;
 	color: #1883ba;
 	margin-bottom: 20px;
@@ -75,7 +76,7 @@ h3{
 	font-size: 1em;
 	font-weight: bold;
 	font-style: normal;
-	font-family: 'JetBrainsMono', sans-serif;
+	/* font-family: 'Arial', sans-serif; */
 	text-align: center;
 	padding-left: 6em;
 	padding-right: 6em;
@@ -85,7 +86,7 @@ h4{
 	font-size: 1.6em;
 	font-weight: bold;
 	font-style: normal;
-	font-family: 'JetBrainsMono', sans-serif;
+	/* font-family: 'Arial', sans-serif; */
 	margin-bottom: 10px;
 }
 
@@ -93,7 +94,7 @@ h5{
 	font-size: 1.4em;
 	font-weight: bold;
 	font-style: normal;
-	font-family: 'JetBrainsMono', sans-serif;
+	/* font-family: 'Arial', sans-serif; */
 	margin-bottom: 10px;
 }
 
@@ -101,7 +102,7 @@ h6{
 	font-size: 1em;
 	font-weight: bold;
 	font-style: normal;
-	font-family: 'JetBrainsMono', sans-serif;
+	/* font-family: 'Arial', sans-serif; */
 	margin-bottom: 10px;
 }
 
@@ -109,7 +110,7 @@ p {
 	font-size: 0.8em;
 	font-weight: normal;
 	font-style: normal;
-	font-family: 'JetBrainsMono';
+	/* font-family: 'Arial'; */
 }
 
 .section{
