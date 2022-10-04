@@ -28,6 +28,7 @@ body {
 }
 
 a {
+	font-family: 'JetBrainsMono';
 	text-decoration: none;
 	color: #0083c5;
 }
