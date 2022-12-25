@@ -1,242 +1,238 @@
 @import url('grid_12-825-55-15.css');
 
 @font-face {
-    font-family: 'arialic_hollowregular';
-    src: url('../fonts/arialic_hollow-webfont.woff2') format('woff2'),
-         url('../fonts/arialic_hollow-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'JetBrainsMono';
+  src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'JetBrainsMono';
-    src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Fira Code';
+  src: url('../fonts/FiraCode-VF.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-	color: #000;
-	background-color: #fff;
-	font-family: Arial, Helvetica, sans-serif
+  color: #000;
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container-md {
-	padding-left: 40px;
-	padding-right: 40px;
-	max-width: 1024px;
+  padding-left: 40px;
+  padding-right: 40px;
+  max-width: 1024px;
 }
 
 .img-container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding-left: 1em;
-	padding-right: 1em;
-} 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
 
 img {
-	width: 100%
+  width: 100%;
 }
 
 .profile_pic {
-	width: 12em 
+  width: 12em;
 }
 
 .section {
-	margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .section-item {
-	margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .row {
-	flex: 1;
-	flex-direction: row;
-	justify-content: space-between;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-h1{
-	font-size: 5em;
-	font-weight: bold;
-	font-style: normal;
-	/* font-family: 'Arial'; */
-	text-align: center;
-	margin-bottom: 0.4em;
+h1 {
+  font-size: 5em;
+  font-weight: bold;
+  font-style: normal;
+  /* font-family: 'Arial'; */
+  text-align: center;
+  margin-bottom: 0.4em;
 }
 
-h2{
-	font-size: 2em;
-	font-weight: bold;
-	font-style: normal;
-	font-family: 'JetBrainsMono';
-	text-align: center;
-	color: #1883ba;
-	margin-bottom: 1em;
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+  font-style: normal;
+  font-family: 'Fira Code';
+  text-align: center;
+  color: #1883ba;
+  margin-bottom: 1em;
 }
 
-h3{
-	font-size: 1em;
-	font-weight: bold;
-	font-style: normal;
-	text-align: center;
+h3 {
+  font-size: 1.8em;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
 }
 
-h4{
-	font-size: 1.4em;
-	font-weight: bold;
-	font-style: normal;
-	margin-bottom: 0.6em;
+h4 {
+  font-size: 1.6em;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 0.6em;
 }
 
-h5{
-	font-size: 1.4em;
-	font-weight: bold;
-	font-style: normal;
-	margin-bottom: 0.4em;
+h5 {
+  font-size: 1.6em;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 0.4em;
 }
 
-h6{
-	font-size: 1em;
-	font-style: normal;
-	width: auto !important;
-	margin-bottom: 0.4em;
+h6 {
+  font-size: 1.2em;
+  font-style: normal;
+  width: auto !important;
+  margin-bottom: 0.4em;
 }
 
 p {
-	font-size: 0.8em;
-	font-weight: normal;
-	font-style: normal;
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
 }
 
 a {
-	font-family: 'JetBrainsMono';
-	text-decoration: none;
-	color: #0083c5;
+  font-family: 'Fira Code';
+  text-decoration: none;
+  color: #0083c5;
 }
 
-li {
-	font-size: 0.8em;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li:before {
+  content: '> ';
 }
 
 .block-par {
-	text-align: justify;
+  text-align: justify;
 }
 
 .block-list-item {
-	text-align: justify;
-	margin-bottom: 0.4em;
+  text-align: justify;
+  margin-bottom: 0.4em;
 }
-  
-  span {
-	border-bottom: .05em solid;
-	animation: caret 1s steps(1) infinite;
+
+span {
+  border-bottom: 0.05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
   }
-  
-  @keyframes caret {
-	50% {
-	  border-color: transparent;
-	}
+}
+
+@media only screen and (max-width: 1400px) {
+  h1 {
+    font-size: 4em;
   }
-
-  @media only screen and (max-width: 1400px) {
-
-	h1 {
-		font-size: 4em;
-	}
-	h2 {
-		font-size: 2em;
-	}
-	h3 {
-		font-size: 2em;
-	}
-
-	h4 {
-		font-size: 1.6em;
-	}
-
-	h5 {
-		font-size: 1.6em;
-	}
-	h6 {
-		font-size: 1.2em;
-	}
-	p {
-		font-size: 1em;
-	}
-	li {
-		font-size: 1em;
-	}
-	img {
-		width: 100%
-	}
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  h4 {
+    font-size: 1.6em;
+  }
+  h5 {
+    font-size: 1.6em;
+  }
+  h6 {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: 1em;
+  }
+  li {
+	font-size: 1em;
+  }
+  img {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-
-	h1 {
-		font-size: 4em;
-		word-spacing: 100vw;
-	}
-	h2 {
-		font-size: 1.5em;
-	}
-	h3 {
-		font-size: 1.5em;
-	}
-
-	h4 {
-		font-size: 1.4em;
-	}
-
-	h5 {
-		font-size: 1.4em;
-	}
-	h6 {
-		font-size: 1.4em;
-	}
-	p {
-		font-size: 1.2em;
-	}
-	li {
-		font-size: 1.2em;
-	}
-	img {
-		width: 100%
-	}
+  h1 {
+    font-size: 4em;
+    word-spacing: 100vw;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.6em;
+  }
+  h4 {
+    font-size: 1.6em;
+  }
+  h5 {
+    font-size: 1.6em;
+  }
+  h6 {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: 1em;
+  }
+  li {
+	font-size: 1em;
+  }
+  img {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-
-	h1 {
-		font-size: 4em;
-		word-spacing: 100vw;
-	}
-	h2 {
-		font-size: 1.5em;
-	}
-	h3 {
-		font-size: 1.5em;
-	}
-
-	h4 {
-		font-size: 1.4em;
-	}
-
-	h5 {
-		font-size: 1.4em;
-	}
-	h6 {
-		font-size: 1.4em;
-	}
-	p {
-		font-size: 1.2em;
-	}
-	li {
-		font-size: 1.2em;
-	}
-	img {
-		width: 100%
-	}
+  h1 {
+    font-size: 3em;
+    word-spacing: 100vw;
+  }
+  h2 {
+    font-size: 1.6em;
+  }
+  h3 {
+    font-size: 1.6em;
+  }
+  h4 {
+    font-size: 1.4em;
+  }
+  h5 {
+    font-size: 1.4em;
+  }
+  h6 {
+    font-size: 1em;
+  }
+  p {
+    font-size: 0.8em;
+  }
+  li {
+	font-size: 0.8em;
+  }
+  img {
+    width: 100%;
+  }
 }
