@@ -1,16 +1,158 @@
 @import url('grid_12-825-55-15.css');
 
 @font-face {
-  font-family: 'Fira Code';
-  src: url('../fonts/FiraCode-VF.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasDisplay-Black.woff2') format('woff2');
+  font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasDisplay-BlackItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasDisplay-Bold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasDisplay-BoldItalic.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasDisplay-Mediu.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasDisplay-MediumItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasDisplay-Mediu.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasDisplay-MediumItalic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasDisplay-Light.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasDisplay-LightItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasDisplay-Light.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasDisplay-LightItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasDisplay-ThinItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasDisplay-Thin.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasDisplay-XThinItalic.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasDisplay-XThin.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasDisplay-XXThin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueHaas';
+  src: url('../fonts/NeueHaasDisplay-XXThinItalic.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
 
 body {
   color: #000;
   background-color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "NeueHaas";
+  font-weight: normal;
 }
 
 .container-md {
@@ -31,8 +173,19 @@ img {
   width: 100%;
 }
 
-.profile_pic {
+.profile-pic {
   width: 12em;
+}
+
+.title-box {
+  background-color: black;
+  margin-bottom: 4em !important;
+}
+
+.title-name {
+  color: white;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .section {
@@ -49,63 +202,68 @@ img {
   justify-content: space-between;
 }
 
+span.avoidwrap {
+  display: inline-block;
+}
+
 h1 {
-  font-size: 5em;
-  font-weight: bold;
+  font-size: 4em;
+  font-weight: 800;
   font-style: normal;
-  /* font-family: 'Arial'; */
-  text-align: center;
   margin-bottom: 0.4em;
 }
 
 h2 {
   font-size: 2em;
-  font-weight: bold;
+  font-weight: 900;
   font-style: normal;
-  font-family: 'Fira Code';
-  text-align: center;
-  color: #1883ba;
-  margin-bottom: 1em;
+  margin-bottom: 0.4em;
 }
 
 h3 {
   font-size: 1.8em;
-  font-weight: bold;
+  font-weight: 800;
   font-style: normal;
-  text-align: center;
+  margin-bottom: 0.4em;
 }
 
 h4 {
-  font-size: 1.6em;
-  font-weight: bold;
+  font-size: 1.8em;
+  font-weight: 500;
   font-style: normal;
-  margin-bottom: 0.6em;
+  margin-bottom: 0.4em;
 }
 
 h5 {
   font-size: 1.6em;
-  font-weight: bold;
+  font-weight: 400;
   font-style: normal;
   margin-bottom: 0.4em;
 }
 
 h6 {
   font-size: 1.2em;
-  font-style: normal;
   width: auto !important;
   margin-bottom: 0.4em;
 }
 
+.heading-underline {
+  padding-bottom: 5px;
+  border: solid;
+  border-width: 0 0 3px 0;
+}
+
 p {
   font-size: 1em;
-  font-weight: normal;
+  /* font-weight: normal; */
   font-style: normal;
+  /* margin-bottom: 0; */
 }
 
 a {
-  font-family: 'Fira Code';
   text-decoration: none;
   color: #0083c5;
+  text-decoration: underline;
 }
 
 ul {
@@ -116,6 +274,7 @@ ul {
 
 li {
   font-size: 1em;
+  font-weight: 500;
 }
 
 li:before {
@@ -131,42 +290,74 @@ li:before {
   margin-bottom: 0.4em;
 }
 
-span {
-  border-bottom: 0.05em solid;
-  animation: caret 1s steps(1) infinite;
+code {
+  font-size: 1em;
+  font-style: normal;
+  text-align: center;
+  color: #9a3cd3;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  /* margin-bottom: 1em; */
+}
+
+.caret {
+  font-family: monospace;
+  padding-right: 1px;
+  padding-left: -1px;
+  box-shadow: inset 0 0 0, inset 0 -0.1em 0, inset 0 0 0, inset 0 0 0;
+  animation: caret 1s linear infinite alternate;
 }
 
 @keyframes caret {
   50% {
-    border-color: transparent;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
-@media only screen and (max-width: 1400px) {
+/* @keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+  } */
+
+/* @media only screen and (max-width: 1400px) {
   h1 {
     font-size: 4em;
   }
+
   h2 {
     font-size: 2em;
   }
+
   h3 {
     font-size: 2em;
   }
+
   h4 {
     font-size: 1.6em;
   }
+
   h5 {
     font-size: 1.6em;
   }
+
   h6 {
     font-size: 1.2em;
   }
+
   p {
     font-size: 1em;
   }
+
   li {
     font-size: 1em;
   }
+
   img {
     width: 100%;
   }
@@ -177,27 +368,35 @@ span {
     font-size: 4em;
     word-spacing: 100vw;
   }
+
   h2 {
     font-size: 2em;
   }
+
   h3 {
     font-size: 1.6em;
   }
+
   h4 {
     font-size: 1.6em;
   }
+
   h5 {
     font-size: 1.6em;
   }
+
   h6 {
     font-size: 1.2em;
   }
+
   p {
     font-size: 1em;
   }
+
   li {
     font-size: 1em;
   }
+
   img {
     width: 100%;
   }
@@ -208,28 +407,36 @@ span {
     font-size: 3em;
     word-spacing: 100vw;
   }
+
   h2 {
     font-size: 1.6em;
   }
+
   h3 {
     font-size: 1.6em;
   }
+
   h4 {
     font-size: 1.4em;
   }
+
   h5 {
     font-size: 1.4em;
   }
+
   h6 {
     font-size: 1em;
   }
+
   p {
     font-size: 0.8em;
   }
+
   li {
     font-size: 0.8em;
   }
+
   img {
     width: 100%;
   }
-}
+} */
