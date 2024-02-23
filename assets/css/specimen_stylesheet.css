@@ -325,7 +325,7 @@ code {
     }
   } */
 
-/* @media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1400px) {
   h1 {
     font-size: 4em;
   }
@@ -439,4 +439,4 @@ code {
   img {
     width: 100%;
   }
-} */
+}
