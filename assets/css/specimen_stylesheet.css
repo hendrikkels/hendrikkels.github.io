@@ -1,6 +1,11 @@
 @import url('grid_12-825-55-15.css');
 
 @font-face {
+  font-family: 'JetBrains Mono';
+  src: url(../fonts/FiraCode-VF.ttf);
+}
+
+@font-face {
   font-family: 'NeueHaas';
   src: url('../fonts/NeueHaasDisplay-Black.woff2') format('woff2');
   font-weight: 900;
@@ -149,8 +154,8 @@
 
 
 body {
-  color: #000;
-  background-color: #fff;
+  color: #0C0C0C;
+  background-color: #FAFAFA;
   font-family: "NeueHaas";
   font-weight: normal;
 }
@@ -178,12 +183,15 @@ img {
 }
 
 .title-box {
-  background-color: black;
-  margin-bottom: 4em !important;
+  background-color: #0C0C0C;
+  color: #fafafa;
+  margin-bottom: 2em !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .title-name {
-  color: white;
   margin-bottom: 0;
   text-align: center;
 }
@@ -214,50 +222,53 @@ h1 {
 }
 
 h2 {
-  font-size: 2em;
+  /* font-size: 2em; */
   font-weight: 900;
   font-style: normal;
   margin-bottom: 0.4em;
 }
 
 h3 {
-  font-size: 1.8em;
+  /* font-size: 1.8em; */
   font-weight: 800;
   font-style: normal;
   margin-bottom: 0.4em;
 }
 
 h4 {
-  font-size: 1.8em;
+  /* font-size: 1.8em; */
   font-weight: 500;
   font-style: normal;
   margin-bottom: 0.4em;
 }
 
 h5 {
-  font-size: 1.6em;
+  /* font-size: 1.6em; */
   font-weight: 400;
   font-style: normal;
   margin-bottom: 0.4em;
 }
 
 h6 {
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
   width: auto !important;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.2em;
 }
 
 .heading-underline {
-  padding-bottom: 5px;
   border: solid;
-  border-width: 0 0 3px 0;
+  border-width: 0 0 2px 0;
+}
+
+.subheading-underline {
+  margin-bottom: 4px;
+  border: dotted;
+  border-width: 0 0 1px 0;
 }
 
 p {
-  font-size: 1em;
-  /* font-weight: normal; */
+  /* font-size: 1em; */
   font-style: normal;
-  /* margin-bottom: 0; */
 }
 
 a {
@@ -273,12 +284,28 @@ ul {
 }
 
 li {
-  font-size: 1em;
+  /* font-size: 1em; */
   font-weight: 500;
 }
 
-li:before {
+/* li b:before {
   content: '> ';
+} */
+
+.text-stay-right {
+  text-align: right;
+  display: inline-block;
+}
+
+.space-between-line {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.full-width-list-item {
+  display: flex;
+  justify-content: space-between;
 }
 
 .block-par {
@@ -291,14 +318,30 @@ li:before {
 }
 
 code {
-  font-size: 1em;
+  /* font-size: 1em; */
   font-style: normal;
   text-align: center;
-  color: #9a3cd3;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  /* margin-bottom: 1em; */
+  font-family: 'JetBrains Mono';
+  color: rgb(166, 166, 166);
+
+  .normal {
+    color: white;
+  }
+
+  .function {
+    color: rgb(255, 175, 16);
+  }
+
+  .string {
+    color: rgb(255, 71, 102);
+  }
+
+  .print {
+    color: rgb(44, 255, 44);
+  }
 }
 
 .caret {
@@ -306,137 +349,169 @@ code {
   padding-right: 1px;
   padding-left: -1px;
   box-shadow: inset 0 0 0, inset 0 -0.1em 0, inset 0 0 0, inset 0 0 0;
-  animation: caret 1s linear infinite alternate;
+  animation: caret 0.5s steps(5, start) infinite;
+  -webkit-animation: caret 0.5s steps(5, start) infinite;
 }
 
 @keyframes caret {
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
+  to {
+    visibility: hidden;
   }
 }
 
-/* @keyframes caret {
-    50% {
-      border-color: transparent;
+@-webkit-keyframes caret {
+  to {
+    visibility: hidden;
+  }
+}
+
+.code-window-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.code-window-body {
+  width: 400px;
+  /* height: 140px; */
+  background-color: rgb(50, 50, 50);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 2px 4px 10px #252525;
+}
+
+.code-window-top-bar {
+  background-color: rgb(24, 24, 24);
+  height: 28px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.code-window-traffic-light {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  margin-left: 8px;
+  background-color: rgb(97, 97, 97);
+}
+
+.code-window-traffic-light-red:hover {
+  background-color: red;
+}
+
+.code-window-traffic-light-yellow:hover {
+  background-color: yellow;
+}
+
+.code-window-traffic-light-green:hover {
+  background-color: rgb(58, 233, 58);
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #fafafa;
+    color: #0c0c0c;
+  }
+
+  .title-box {
+    background-color: #0c0c0c;
+    color: #fafafa;
+  }
+
+  code {
+    color: rgb(166, 166, 166);
+
+    .normal {
+      color: white;
     }
-  } */
+
+    .function {
+      color: rgb(255, 175, 16);
+    }
+
+    .string {
+      color: rgb(255, 71, 102);
+    }
+
+    .print {
+      color: rgb(44, 255, 44);
+    }
+  }
+
+  .code-window-body {
+    background-color: rgb(50, 50, 50);
+  }
+
+  .code-window-top-bar {
+    background-color: rgb(24, 24, 24);
+  }
+
+  .code-window-traffic-light {
+    background-color: rgb(97, 97, 97);
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0c0c0c;
+    color: #fafafa;
+  }
+
+  .title-box {
+    background-color: #fafafa;
+    color: #0c0c0c;
+  }
+
+  code {
+    color: rgb(93, 93, 93);
+
+    .normal {
+      color: rgb(0, 0, 0);
+    }
+
+    .function {
+      color: rgb(147, 15, 213);
+    }
+
+    .string {
+      color: rgb(217, 28, 59);
+    }
+
+    .print {
+      color: rgb(29, 190, 29);
+    }
+  }
+
+  .code-window-body {
+    background-color: rgb(224, 224, 224);
+  }
+
+  .code-window-top-bar {
+    background-color: rgb(198, 198, 198);
+  }
+
+  .code-window-traffic-light {
+    background-color: rgb(150, 150, 150);
+  }
+}
 
 @media only screen and (max-width: 1400px) {
-  h1 {
+  .title-name {
     font-size: 4em;
-  }
-
-  h2 {
-    font-size: 2em;
-  }
-
-  h3 {
-    font-size: 2em;
-  }
-
-  h4 {
-    font-size: 1.6em;
-  }
-
-  h5 {
-    font-size: 1.6em;
-  }
-
-  h6 {
-    font-size: 1.2em;
-  }
-
-  p {
-    font-size: 1em;
-  }
-
-  li {
-    font-size: 1em;
-  }
-
-  img {
-    width: 100%;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  h1 {
-    font-size: 4em;
-    word-spacing: 100vw;
-  }
-
-  h2 {
-    font-size: 2em;
-  }
-
-  h3 {
-    font-size: 1.6em;
-  }
-
-  h4 {
-    font-size: 1.6em;
-  }
-
-  h5 {
-    font-size: 1.6em;
-  }
-
-  h6 {
-    font-size: 1.2em;
-  }
-
-  p {
-    font-size: 1em;
-  }
-
-  li {
-    font-size: 1em;
-  }
-
-  img {
-    width: 100%;
+  .title-name {
+    font-size: 2.5em;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  h1 {
+  .title-name {
     font-size: 3em;
     word-spacing: 100vw;
-  }
-
-  h2 {
-    font-size: 1.6em;
-  }
-
-  h3 {
-    font-size: 1.6em;
-  }
-
-  h4 {
-    font-size: 1.4em;
-  }
-
-  h5 {
-    font-size: 1.4em;
-  }
-
-  h6 {
-    font-size: 1em;
-  }
-
-  p {
-    font-size: 0.8em;
-  }
-
-  li {
-    font-size: 0.8em;
-  }
-
-  img {
-    width: 100%;
   }
 }

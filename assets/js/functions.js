@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // chekc if text isn't finished yet
     if (i < (text.length)) {
       // add next character to h1
-      document.querySelector("code").innerHTML = text.substring(0, i + 1) + '<span class="caret" aria-hidden="true">&nbsp;</span>';
+      document.querySelector(".role-text").innerHTML = text.substring(0, i + 1) + '<span class="caret" aria-hidden="true">&nbsp;</span>';
 
       // wait for a while and call this function again for next character
       setTimeout(function () {
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // chekc if text isn't finished yet
     if (i > 0) {
       // add next character to h1
-      document.querySelector("code").innerHTML = text.substring(0, i - 1) + '<span class="caret" aria-hidden="true">&nbsp;</span>';
+      document.querySelector(".role-text").innerHTML = text.substring(0, i - 1) + '<span class="caret" aria-hidden="true">&nbsp;</span>';
 
       // wait for a while and call this function again for next character
       setTimeout(function () {
