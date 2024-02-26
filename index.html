@@ -25,31 +25,32 @@
 </head>
 
 <body>
+
+
+
 	<div>
-		<div class="py-5 title-box">
-			<div class="container-md">
-				<h1 class="title-name">Hendrik <span class="name-title avoidwrap">van Heerden</span>
-				</h1>
-			</div>
+		<div class="title-box">
+			<div class="title-mask"></div>
+			<!-- <div class="container-md"> -->
+			<h1 class="title-name">Hendrik <span class="name-title avoidwrap">van Heerden</span>
+			</h1>
+			<!-- </div> -->
+
 		</div>
 
-
-
 		<div class="container-md">
-
-			<div class="section">
-				<div class="code-window-wrapper">
-					<div class="code-window-body">
-						<div class="code-window-top-bar">
-							<div class="code-window-traffic-light code-window-traffic-light-red">
-							</div>
-							<div class="code-window-traffic-light code-window-traffic-light-yellow">
-							</div>
-							<div class="code-window-traffic-light code-window-traffic-light-green">
-							</div>
+			<div class="code-window-wrapper" id="closable-code-window">
+				<div class="code-window-body">
+					<div class="code-window-top-bar">
+						<div onclick="hideCodeWindow()" class="code-window-traffic-light code-window-traffic-light-red">
 						</div>
-						<div class="p-2 px-3">
-							<code>
+						<div class="code-window-traffic-light code-window-traffic-light-yellow">
+						</div>
+						<div class="code-window-traffic-light code-window-traffic-light-green">
+						</div>
+					</div>
+					<div class="p-2 px-3">
+						<code>
 								<span class="normal">function</span> <span class="function">whatAmI</span><span>()</span> <span class="normal">{</span>
 								<br />
 								<span>&nbsp;</span><span class="print">print</span><span>(</span><span class="string">"<span class="role-text"+>Software</span>"</span><span>);</span>
@@ -57,13 +58,9 @@
 								<span>}</span>
 								<br />
 							</code>
-						</div>
 					</div>
-
 				</div>
-
 			</div>
-
 			<!-- <h1>Heading 1</h1>
 			<h2>Heading 2</h2>
 			<h3>Heading 3</h3>
@@ -73,7 +70,7 @@
 			<code>Code</code> -->
 			<div class="section">
 				<h3 class="heading-underline">Biography</h3>
-				<p>
+				<p class="block-par">
 					United States citizen with a Bachelors in Computer Science, currently residing in Cape Town, South Africa.
 					I'm a Highly skilled and motivated full stack software engineer with proven experience in using modern
 					technologies and frameworks to build scalable and robust applications.
@@ -440,12 +437,18 @@
 				<div class="row">
 					<div class="col-lg-6">
 						<h5>Interests</h5>
-						<p>Digital design and software. Hobbies include kitesurfing, surfing, scuba diving, skiing/snowboarding,
-							music and entertainment.</p>
+						<p><span>Digital design and software.</span>
+							<span>Hobbies include Kite Surfing, Mountain Bikinig, Scuba Diving, Skiing/Snowboarding, Music and
+								Entertainment.</span>
+						</p>
 					</div>
 					<div class="col-lg-6">
 						<h5>Other leadership</h5>
-						<p>Class captain in high school and captain of waterpolo team. </p>
+						<p>
+							<span>Class captain in high school.</span>
+							<br />
+							<span>Captain of waterpolo team.</span>
+						</p>
 					</div>
 				</div>
 			</div>

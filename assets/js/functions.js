@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', function (event) {
+
+
+
+
   // array with texts to type in typewriter
   var dataText = ["Developer", "Systems Architect", "Software Engineer",];
 
@@ -69,3 +73,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
   // start the text animation
   StartTextAnimation(0);
 });
+
+
+function hideCodeWindow() {
+  var htmlShow = document.getElementById("closable-code-window");
+  if (htmlShow.style.display === "none") {
+    htmlShow.style.display = "block";
+  } else {
+    htmlShow.style.display = "none";
+  }
+}
