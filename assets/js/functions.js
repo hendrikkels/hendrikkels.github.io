@@ -76,10 +76,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 
 function hideCodeWindow() {
-  var htmlShow = document.getElementById("closable-code-window");
-  if (htmlShow.style.display === "none") {
-    htmlShow.style.display = "block";
+  var codeWindow = document.getElementById("closable-code-window");
+  var titleBox = document.getElementById("shrinkable-title-box")
+  if (codeWindow.style.display === "none") {
+    codeWindow.style.display = "block";
+    titleBox.style.height = "400px";
   } else {
-    htmlShow.style.display = "none";
+    codeWindow.style.display = "none";
+    titleBox.style.height = "200px"
   }
 }
