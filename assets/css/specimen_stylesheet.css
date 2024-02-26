@@ -161,7 +161,6 @@ body {
 }
 
 
-
 .container-md {
   padding-left: 40px;
   padding-right: 40px;
@@ -191,11 +190,24 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 180px;
+  height: 400px;
+}
+
+.title-name-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  /* background-color: red; */
+  height: 400px;
+  gap: 2em;
 }
 
 .title-name {
-  position: absolute;
+  /* position: absolute; */
+  /* background-color: #0083c5; */
+  font-size: 5em;
   margin-bottom: 0;
   text-align: center;
 }
@@ -237,8 +249,6 @@ img {
   background-position: 50% 50%, 50% 50%;
   mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
   pointer-events: none;
-
-
 
   background-image: var(--stripesDark), var(--rainbow);
   filter: blur(10px) opacity(50%) saturate(200%);
@@ -428,19 +438,22 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2em;
 }
 
 .code-window-body {
   width: 480px;
-  background-color: rgb(46, 46, 46);
+  background-color: rgb(46, 46, 46, 0.7);
+  border: solid rgb(59, 59, 59);
+  border-width: 1px;
   border-radius: 10px;
   overflow: hidden;
   /* box-shadow: 2px 4px 10px #252525; */
 }
 
 .code-window-top-bar {
-  background-color: rgb(24, 24, 24);
+  background-color: rgb(24, 24, 24, 0.7);
+  border-bottom: solid rgb(59, 59, 59);
+  border-width: 1px;
   height: 28px;
   display: flex;
   flex-direction: row;
@@ -452,7 +465,7 @@ code {
   width: 12px;
   border-radius: 50%;
   margin-left: 8px;
-  background-color: rgb(97, 97, 97);
+  background-color: rgb(97, 97, 97, 0.7);
 }
 
 .code-window-traffic-light-red:hover {
@@ -509,15 +522,19 @@ code {
   }
 
   .code-window-body {
-    background-color: rgb(253, 253, 253);
+    background-color: rgb(253, 253, 253, 0.7);
+    border: solid rgb(214, 214, 214);
+    border-width: 1px;
   }
 
   .code-window-top-bar {
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(236, 236, 236, 0.7);
+    border-bottom: solid rgb(214, 214, 214);
+    border-width: 1px;
   }
 
   .code-window-traffic-light {
-    background-color: rgb(212, 212, 212);
+    background-color: rgb(212, 212, 212, 0.7);
   }
 }
 
@@ -528,12 +545,30 @@ code {
 }
 
 @media only screen and (max-width: 768px) {
+  .title-box {
+    height: 100vh;
+  }
+
+  .code-window-wrapper {
+    display: none;
+  }
+
   .title-name {
-    font-size: 2.5em;
+    font-size: 3em;
+    word-spacing: 100vw;
   }
 }
 
 @media only screen and (max-width: 480px) {
+
+  .title-box {
+    height: 100vh;
+  }
+
+  .code-window-wrapper {
+    display: none;
+  }
+
   .title-name {
     font-size: 3em;
     word-spacing: 100vw;
