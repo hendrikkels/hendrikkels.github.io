@@ -37,7 +37,6 @@
   font-display: swap;
 }
 
-
 @font-face {
   font-family: 'NeueHaas';
   src: url('../fonts/NeueHaasDisplay-Mediu.woff2') format('woff2');
@@ -53,7 +52,6 @@
   font-style: italic;
   font-display: swap;
 }
-
 
 @font-face {
   font-family: 'NeueHaas';
@@ -86,7 +84,6 @@
   font-style: italic;
   font-display: swap;
 }
-
 
 @font-face {
   font-family: 'NeueHaas';
@@ -160,7 +157,6 @@ body {
   font-weight: normal;
 }
 
-
 .container-md {
   padding-left: 40px;
   padding-right: 40px;
@@ -184,8 +180,8 @@ img {
 }
 
 .title-box {
-  background-color: #0C0C0C;
-  color: #fafafa;
+  color: #0C0C0C;
+  background-color: #fafafa;
   margin-bottom: 2em !important;
   display: flex;
   justify-content: center;
@@ -248,15 +244,19 @@ img {
   mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
   pointer-events: none;
 
-  background-image: var(--stripesDark), var(--rainbow);
-  filter: blur(10px) opacity(50%) saturate(200%);
+  /* background-image: var(--stripesDark), var(--rainbow);
+  filter: blur(10px) opacity(50%) saturate(200%); */
+
+  background-image: var(--stripes), var(--rainbow);
+  filter: blur(10px) invert(100%);
 }
 
 .title-mask::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: var(--stripesDark), var(--rainbow);
+  /* background-image: var(--stripesDark), var(--rainbow); */
+  background-image: var(--stripes), var(--rainbow);
   background-size: 200%, 100%;
   animation: title-mask 60s linear infinite;
   background-attachment: fixed;
@@ -486,17 +486,17 @@ code {
   }
 
   .title-box {
-    background-color: #fafafa;
-    color: #0c0c0c;
+    color: #fafafa;
+    background-color: #0c0c0c;
   }
 
   .title-mask {
-    background-image: var(--stripes), var(--rainbow);
-    filter: blur(10px) invert(100%);
+    background-image: var(--stripesDark), var(--rainbow);
+    filter: blur(10px) opacity(50%) saturate(200%);
   }
 
   .title-mask::after {
-    background-image: var(--stripes), var(--rainbow);
+    background-image: var(--stripesDark), var(--rainbow);
   }
 
   code {
