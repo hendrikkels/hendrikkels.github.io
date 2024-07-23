@@ -1,11 +1,6 @@
 @import url('grid_12-825-55-15.css');
 
 @font-face {
-  font-family: 'JetBrains Mono';
-  src: url(../fonts/FiraCode-VF.ttf);
-}
-
-@font-face {
   font-family: 'NeueHaas';
   src: url('../fonts/NeueHaasDisplay-Black.woff2') format('woff2');
   font-weight: 900;
@@ -71,7 +66,7 @@
 
 @font-face {
   font-family: 'NeueHaas';
-  src: url('../fonts/NeueHaasDisplay-Light.woff2') format('woff2');
+  src: url('../fonts/NeueHaasDisplay-Roman.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -79,7 +74,7 @@
 
 @font-face {
   font-family: 'NeueHaas';
-  src: url('../fonts/NeueHaasDisplay-LightItalic.woff2') format('woff2');
+  src: url('../fonts/NeueHaasDisplay-RomanItalic.woff2') format('woff2');
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -149,12 +144,38 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Fira Code';
+  src: url(../fonts/FiraCode-VF.ttf);
+}
+
+@font-face {
+  font-family: 'Calfine';
+  src: url(../fonts/Calfinedemo.otf);
+}
+
+@font-face {
+  font-family: 'Sonder';
+  src: url(../fonts/SonderRegular.otf);
+}
+
+@font-face {
+  font-family: 'Maghfirea';
+  src: url(../fonts/Maghfirea.otf);
+}
+
+
 
 body {
   color: #0C0C0C;
   background-color: #FAFAFA;
   font-family: "NeueHaas";
   font-weight: normal;
+  margin: 0;
+}
+
+.page-wrapper {
+  margin-bottom: 48px;
 }
 
 .container-md {
@@ -163,30 +184,14 @@ body {
   max-width: 1024px;
 }
 
-.img-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-img {
-  width: 100%;
-}
-
-.profile-pic {
-  width: 12em;
-}
-
 .title-box {
-  color: #0C0C0C;
-  background-color: #fafafa;
+  color: #ffffff;
+  background-color: #0012ee;
   margin-bottom: 2em !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 50vh;
 }
 
 .title-name-wrapper {
@@ -201,67 +206,13 @@ img {
 .title-name {
   /* position: absolute; */
   /* background-color: #0083c5; */
-  font-size: 5em;
+  font-size: clamp(5rem, 5.3043rem + 3.4783vw, 10rem);
   margin-bottom: 0;
   text-align: center;
+  font-family: Sonder;
+  font-weight: lighter
 }
 
-@keyframes title-mask {
-  from {
-    background-position: 50% 50%, 50% 50%;
-  }
-
-  to {
-    background-position: 350% 50%, 350% 50%;
-  }
-}
-
-.title-mask {
-  height: 100%;
-  width: 100%;
-  /* position: absolute; */
-  --stripes: repeating-linear-gradient(100deg,
-      #fff 0%,
-      #fff 7%,
-      transparent 10%,
-      transparent 12%,
-      #fff 16%);
-  --stripesDark: repeating-linear-gradient(100deg,
-      #000 0%,
-      #000 7%,
-      transparent 10%,
-      transparent 12%,
-      #000 16%);
-  --rainbow: repeating-linear-gradient(100deg,
-      #60a5fa 10%,
-      #e879f9 15%,
-      #60a5fa 20%,
-      #5eead4 25%,
-      #60a5fa 30%);
-
-  background-size: 300%, 200%;
-  background-position: 50% 50%, 50% 50%;
-  mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
-  pointer-events: none;
-
-  /* background-image: var(--stripesDark), var(--rainbow);
-  filter: blur(10px) opacity(50%) saturate(200%); */
-
-  background-image: var(--stripes), var(--rainbow);
-  filter: blur(10px) invert(100%);
-}
-
-.title-mask::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  /* background-image: var(--stripesDark), var(--rainbow); */
-  background-image: var(--stripes), var(--rainbow);
-  background-size: 200%, 100%;
-  animation: title-mask 60s linear infinite;
-  background-attachment: fixed;
-  mix-blend-mode: difference;
-}
 
 .section {
   margin-bottom: 24px;
@@ -282,42 +233,43 @@ span.avoidwrap {
 }
 
 h1 {
-  font-size: 4em;
-  font-weight: 800;
+  margin-top: 0.2em;
+  font-weight: 900;
   font-style: normal;
   margin-bottom: 0.4em;
 }
 
 h2 {
-  /* font-size: 2em; */
+  margin-top: 0.2em;
   font-weight: 900;
   font-style: normal;
   margin-bottom: 0.4em;
 }
 
 h3 {
-  /* font-size: 1.8em; */
-  font-weight: 800;
+  margin-top: 0.2em;
+  font-weight: 900;
   font-style: normal;
   margin-bottom: 0.4em;
 }
 
 h4 {
-  /* font-size: 1.8em; */
-  font-weight: 500;
+  margin-top: 0.2em;
+  font-weight: 900;
   font-style: normal;
   margin-bottom: 0.4em;
 }
 
 h5 {
-  /* font-size: 1.6em; */
-  font-weight: 400;
+  margin-top: 0.2em;
+  font-weight: 900;
   font-style: normal;
   margin-bottom: 0.4em;
 }
 
 h6 {
-  /* font-size: 1.2em; */
+  margin-top: 0.2em;
+  font-weight: 900;
   width: auto !important;
   margin-bottom: 0.2em;
 }
@@ -334,11 +286,13 @@ h6 {
 }
 
 p {
-  /* font-size: 1em; */
+  margin-top: 0.2em;
   font-style: normal;
+  font-weight: 600;
 }
 
 a {
+  margin-top: 0.2em;
   text-decoration: none;
   color: #0083c5;
   text-decoration: underline;
@@ -351,12 +305,13 @@ ul {
 }
 
 li {
-  /* font-size: 1em; */
-  font-weight: 500;
+  margin-top: 0.2em;
+  font-weight: 600;
 }
 
 li b:before {
-  content: '> ';
+  content: '▪';
+  margin-right: 8px;
 }
 
 .text-stay-right {
@@ -376,106 +331,13 @@ li b:before {
 }
 
 .block-par {
+  /* background-color: red; */
   text-align: justify;
 }
 
 .block-list-item {
   text-align: justify;
   margin-bottom: 0.4em;
-}
-
-code {
-  font-size: 1.2em;
-  font-style: normal;
-  text-align: center;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  font-family: 'JetBrains Mono';
-  color: rgb(166, 166, 166);
-
-  .normal {
-    color: white;
-  }
-
-  .function {
-    color: #60a5fa;
-  }
-
-  .string {
-    color: #e11dff;
-  }
-
-  .print {
-    color: #1be195;
-  }
-}
-
-.caret {
-  font-family: monospace;
-  padding-right: 1px;
-  padding-left: -1px;
-  box-shadow: inset 0 0 0, inset 0 -0.1em 0, inset 0 0 0, inset 0 0 0;
-  animation: caret 0.5s steps(5, start) infinite;
-  -webkit-animation: caret 0.5s steps(5, start) infinite;
-}
-
-@keyframes caret {
-  to {
-    visibility: hidden;
-  }
-}
-
-@-webkit-keyframes caret {
-  to {
-    visibility: hidden;
-  }
-}
-
-.code-window-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.code-window-body {
-  width: 480px;
-  background-color: rgb(46, 46, 46, 0.7);
-  border: solid rgb(59, 59, 59);
-  border-width: 1px;
-  border-radius: 10px;
-  overflow: hidden;
-  /* box-shadow: 2px 4px 10px #252525; */
-}
-
-.code-window-top-bar {
-  background-color: rgb(24, 24, 24, 0.7);
-  border-bottom: solid rgb(59, 59, 59);
-  border-width: 1px;
-  height: 28px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.code-window-traffic-light {
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  margin-left: 8px;
-  background-color: rgb(97, 97, 97, 0.7);
-}
-
-.code-window-traffic-light-red:hover {
-  background-color: red;
-}
-
-.code-window-traffic-light-yellow:hover {
-  background-color: yellow;
-}
-
-.code-window-traffic-light-green:hover {
-  background-color: rgb(58, 233, 58);
 }
 
 /* Dark mode */
@@ -487,58 +349,18 @@ code {
 
   .title-box {
     color: #fafafa;
-    background-color: #0c0c0c;
-  }
-
-  .title-mask {
-    background-image: var(--stripesDark), var(--rainbow);
-    filter: blur(10px) opacity(50%) saturate(200%);
-  }
-
-  .title-mask::after {
-    background-image: var(--stripesDark), var(--rainbow);
-  }
-
-  code {
-    color: rgb(93, 93, 93);
-
-    .normal {
-      color: rgb(0, 0, 0);
-    }
-
-    .function {
-      color: #60a5fa;
-    }
-
-    .string {
-      color: #e879f9;
-    }
-
-    .print {
-      color: #2ab8a2;
-    }
-  }
-
-  .code-window-body {
-    background-color: rgb(253, 253, 253, 0.7);
-    border: solid rgb(214, 214, 214);
-    border-width: 1px;
-  }
-
-  .code-window-top-bar {
-    background-color: rgb(236, 236, 236, 0.7);
-    border-bottom: solid rgb(214, 214, 214);
-    border-width: 1px;
-  }
-
-  .code-window-traffic-light {
-    background-color: rgb(212, 212, 212, 0.7);
+    background-color: #18117d;
   }
 }
 
 @media only screen and (max-width: 1400px) {
+  .title-box {
+    height: 100vh;
+  }
+
   .title-name {
-    font-size: 4em;
+    font-size: 8em;
+    word-spacing: 80vw;
   }
 }
 
@@ -552,8 +374,8 @@ code {
   }
 
   .title-name {
-    font-size: 3em;
-    word-spacing: 100vw;
+    font-size: 5em;
+    word-spacing: 80vw;
   }
 }
 
@@ -569,6 +391,6 @@ code {
 
   .title-name {
     font-size: 3em;
-    word-spacing: 100vw;
+    word-spacing: 80vw;
   }
 }
