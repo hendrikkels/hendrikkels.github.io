@@ -690,7 +690,6 @@ footer p {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
-  flex: 1;
 }
 
 .skill-item {
