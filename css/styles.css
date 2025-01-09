@@ -44,7 +44,7 @@ h3 {
   --tag-text-hover: #ffffff;
   --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   --card-shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.15);
-  --grid-color: rgba(0, 0, 0, 0.203);
+  /* --grid-color: rgba(0, 0, 0, 0.203); */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -65,7 +65,7 @@ h3 {
     --tag-text-hover: #ffffff;
     --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     --card-shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.4);
-    --grid-color: rgba(255, 255, 255, 0.296);
+    /* --grid-color: rgba(255, 255, 255, 0.296); */
 
   }
 }
@@ -731,6 +731,8 @@ footer p {
   padding: 1.5rem;
   box-shadow: var(--card-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .card:hover {
