@@ -28,6 +28,7 @@ h3 {
 :root {
   /* Base size for mobile */
   font-size: 16px;
+  --blur-amount: 24px;
   /* Light mode colors */
   --background-color: #ffffff;
   --text-color: #333333;
@@ -44,7 +45,7 @@ h3 {
   --tag-text-hover: #ffffff;
   --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   --card-shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.15);
-  /* --grid-color: rgba(0, 0, 0, 0.203); */
+  --grid-color: rgba(0, 0, 0, 0.203);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -52,7 +53,7 @@ h3 {
     /* Dark mode colors */
     --background-color: #121212;
     --text-color: #e0e0e0;
-    --primary-color: #8604ff;
+    --primary-color: #59d8e9;
     --secondary-color: #1f1f1f;
     --navbar-color: rgba(31, 31, 31, 0.5);
     --box-shadow-color: rgba(255, 255, 255, 0.1);
@@ -65,7 +66,7 @@ h3 {
     --tag-text-hover: #ffffff;
     --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     --card-shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.4);
-    /* --grid-color: rgba(255, 255, 255, 0.296); */
+    --grid-color: rgba(255, 255, 255, 0.296);
 
   }
 }
@@ -107,8 +108,8 @@ button {
   position: fixed;
   width: 100%;
   background-color: var(--navbar-color);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
   box-shadow: 0 2px 5px var(--box-shadow-color);
   z-index: 1000;
 }
@@ -230,17 +231,19 @@ button {
 .cta-button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: var(--primary-color);
   color: var(--background-color);
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
   font-size: clamp(0.9rem, 2vw, 1rem);
   box-sizing: border-box;
+  background-color: var(--primary-color);
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
 }
 
 .cta-button:hover {
-  /* background-color: red; */
+  background-color: var(--primary-color);
 }
 
 .buzzword-tags {
@@ -731,8 +734,8 @@ footer p {
   padding: 1.5rem;
   box-shadow: var(--card-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
 }
 
 .card:hover {
@@ -748,8 +751,8 @@ footer p {
   border-radius: 20px;
   font-size: 0.9rem;
   transition: all 0.3s ease;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
 }
 
 .tag:hover {
