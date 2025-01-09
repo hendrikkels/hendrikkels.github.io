@@ -93,6 +93,12 @@ body {
   line-height: 1.6;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 /* Navigation */
 .navbar {
   position: fixed;
@@ -227,10 +233,11 @@ body {
   border-radius: 5px;
   transition: background-color 0.3s;
   font-size: clamp(0.9rem, 2vw, 1rem);
+  box-sizing: border-box;
 }
 
 .cta-button:hover {
-  background-color: darken(var(--primary-color), 10%);
+  /* background-color: red; */
 }
 
 .buzzword-tags {
@@ -244,8 +251,8 @@ body {
 /* Sections */
 section {
   padding: 5rem 2rem;
+  scroll-margin-top: 0px;
   background-color: var(--background-color);
-  scroll-margin-top: 100px;
 }
 
 h2 {
@@ -309,7 +316,7 @@ h3 {
 
 .project-image {
   height: 200px;
-  background-color: #ddd;
+  background-color: #ee00ff;
 }
 
 .project-info {
@@ -465,6 +472,7 @@ footer p {
 
 /* Container width limits for larger screens */
 @media (min-width: 1200px) {
+
   .nav-content,
   .about-content,
   .project-grid,
@@ -619,12 +627,6 @@ footer p {
   }
 }
 
-/* Skills Section */
-.skills {
-  padding: 5rem 2rem;
-  background-color: var(--background-color);
-}
-
 .skills-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -672,37 +674,6 @@ footer p {
   .skills-grid {
     grid-template-columns: 1fr;
   }
-}
-
-/* Add scroll margin to all sections */
-section {
-  scroll-margin-top: 100px;
-  /* Adjust this value to control the space between navbar and section headers */
-}
-
-/* If you need to fine-tune specific sections */
-#skills {
-  scroll-margin-top: 0px;
-}
-
-#about {
-  scroll-margin-top: 0px;
-}
-
-#experience {
-  scroll-margin-top: 0px;
-}
-
-#projects {
-  scroll-margin-top: 0px;
-}
-
-#education {
-  scroll-margin-top: 0px;
-}
-
-#contact {
-  scroll-margin-top: 0px;
 }
 
 /* Experience Section - Additional Styles */

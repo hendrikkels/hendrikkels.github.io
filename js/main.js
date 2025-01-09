@@ -1,24 +1,27 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
+document.addEventListener('DOMContentLoaded', function () {
+  // Handle smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Handle CTA button smooth scrolling
+  document.querySelectorAll('[data-scroll-to]').forEach(button => {
+    button.addEventListener('click', function () {
+      const targetId = this.getAttribute('data-scroll-to');
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
     });
   });
 });
-
-// Navbar scroll effect
-// window.addEventListener('scroll', function () {
-//   const navbar = document.querySelector('.navbar');
-//   if (window.scrollY > 50) {
-//     navbar.style.backgroundColor = '#fff';
-//     navbar.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
-//   } else {
-//     navbar.style.backgroundColor = 'transparent';
-//     navbar.style.boxShadow = 'none';
-//   }
-// });
 
 // Add animation class to elements when they come into view
 const observerOptions = {
