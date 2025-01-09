@@ -37,8 +37,6 @@ h3 {
   --navbar-color: rgba(255, 255, 255, 0.5);
   --box-shadow-color: rgba(0, 0, 0, 0.1);
   --nav-text-color: #333333;
-  --skill-tag-bg: #e9ecef;
-  --skill-tag-text: #333333;
   --button-bg: #80808020;
   --card-bg: #80808020;
   --footer-bg: #80808020;
@@ -60,8 +58,6 @@ h3 {
     --navbar-color: rgba(31, 31, 31, 0.5);
     --box-shadow-color: rgba(255, 255, 255, 0.1);
     --nav-text-color: #e0e0e0;
-    --skill-tag-bg: #2d2d2d;
-    --skill-tag-text: #e0e0e0;
     --button-bg: #7f7f7f40;
     --card-bg: #7f7f7f40;
     --footer-bg: #7f7f7f40;
@@ -120,7 +116,7 @@ button {
   width: 100%;
   background-color: var(--navbar-color);
   backdrop-filter: blur(var(--blur-amount));
-  -webkit-backdrop-filter: blur(var(--blur-amount));
+  /* -webkit-backdrop-filter: blur(var(--blur-amount)); */
   box-shadow: 0 2px 5px var(--box-shadow-color);
   z-index: 1000;
 }
@@ -250,7 +246,7 @@ button {
   box-sizing: border-box;
   background-color: var(--primary-color);
   backdrop-filter: blur(var(--blur-amount));
-  -webkit-backdrop-filter: blur(var(--blur-amount));
+  /* -webkit-backdrop-filter: blur(var(--blur-amount)); */
 }
 
 .cta-button:hover {
@@ -375,7 +371,7 @@ h3 {
 .contact-item {
   background-color: var(--button-bg);
   backdrop-filter: blur(var(--blur-amount));
-  -webkit-backdrop-filter: blur(var(--blur-amount));
+  /* -webkit-backdrop-filter: blur(var(--blur-amount)); */
   border-radius: 50px;
   padding: 0.8rem 1.5rem;
   transition: all 0.3s ease;
@@ -430,7 +426,7 @@ footer {
   color: var(--text-color);
   background-color: var(--footer-bg);
   backdrop-filter: blur(var(--blur-amount));
-  -webkit-backdrop-filter: blur(var(--blur-amount));
+  /* -webkit-backdrop-filter: blur(var(--blur-amount)); */
 }
 
 footer p {
@@ -744,7 +740,7 @@ footer p {
   box-shadow: var(--card-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   backdrop-filter: blur(var(--blur-amount));
-  -webkit-backdrop-filter: blur(var(--blur-amount));
+  /* -webkit-backdrop-filter: blur(var(--blur-amount)); */
 }
 
 .card:hover {
@@ -761,7 +757,7 @@ footer p {
   font-size: 0.9rem;
   transition: all 0.3s ease;
   backdrop-filter: blur(var(--blur-amount));
-  -webkit-backdrop-filter: blur(var(--blur-amount));
+  /* -webkit-backdrop-filter: blur(var(--blur-amount)); */
 }
 
 .tag:hover {
