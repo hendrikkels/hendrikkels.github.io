@@ -39,7 +39,9 @@ h3 {
   --nav-text-color: #333333;
   --skill-tag-bg: #e9ecef;
   --skill-tag-text: #333333;
+  --button-bg: #80808020;
   --card-bg: #80808020;
+  --footer-bg: #80808020;
   --tag-bg: #80808020;
   --tag-text: #4b5563;
   --tag-text-hover: #ffffff;
@@ -60,7 +62,9 @@ h3 {
     --nav-text-color: #e0e0e0;
     --skill-tag-bg: #2d2d2d;
     --skill-tag-text: #e0e0e0;
+    --button-bg: #7f7f7f40;
     --card-bg: #7f7f7f40;
+    --footer-bg: #7f7f7f40;
     --tag-bg: #7f7f7f40;
     --tag-text: #e5e7eb;
     --tag-text-hover: #ffffff;
@@ -95,6 +99,13 @@ body {
   color: var(--text-color);
   font-family: "Arial", sans-serif;
   line-height: 1.6;
+
+  background-color: var(--background-color);
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: center center;
 }
 
 button {
@@ -258,12 +269,6 @@ button {
 section {
   padding: 5rem 2rem;
   scroll-margin-top: 0px;
-  background-color: var(--background-color);
-  background-image:
-    linear-gradient(var(--grid-color) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
-  background-size: 20px 20px;
-  background-position: center center;
 }
 
 h2 {
@@ -368,7 +373,9 @@ h3 {
 }
 
 .contact-item {
-  background-color: var(--secondary-color);
+  background-color: var(--button-bg);
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
   border-radius: 50px;
   padding: 0.8rem 1.5rem;
   transition: all 0.3s ease;
@@ -420,8 +427,10 @@ h3 {
 footer {
   text-align: center;
   padding: 2rem;
-  background-color: var(--secondary-color);
   color: var(--text-color);
+  background-color: var(--footer-bg);
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
 }
 
 footer p {
