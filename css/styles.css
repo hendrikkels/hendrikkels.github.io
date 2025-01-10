@@ -28,10 +28,9 @@ h3 {
 :root {
   /* Base size for mobile */
   font-size: 16px;
-  --blur-amount: 24px;
-  --blur-strength-sm: 4px;
-  --blur-strength-md: 6px;
-  --blur-strength-lg: 12px;
+  --blur-strength-sm: 8px;
+  --blur-strength-md: 16px;
+  --blur-strength-lg: 32px;
   /* Light mode colors */
   --background-color: #ffffff;
   --text-color: #333333;
@@ -771,8 +770,8 @@ footer p {
 .tag:hover {
   cursor: default;
   transform: translateY(0px);
-  background-color: var(--primary-color);
-  color: var(--tag-text-hover);
+  /* background-color: var(--primary-color);
+  color: var(--tag-text-hover); */
 }
 
 /* Grid Layouts */
@@ -788,11 +787,6 @@ footer p {
   padding: 0 1.5rem;
 }
 
-.grid {
-  display: grid;
-  gap: 2rem;
-}
-
 /* Skills Section */
 .skills-container {
   /* Match education section width */
@@ -803,6 +797,13 @@ footer p {
 .skills-grid {
   display: grid;
   gap: 2rem;
+}
+
+/* Skills list adjustments */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
 }
 
 /* Responsive grid adjustments */
@@ -837,19 +838,10 @@ footer p {
   }
 }
 
-/* Skills list adjustments */
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-}
-
 /* Base blur class */
 .blur-background {
   position: relative;
-  /* background: transparent; */
   isolation: isolate;
-  /* Create stacking context */
 }
 
 .blur-background::before {
@@ -858,9 +850,6 @@ footer p {
   inset: 0;
   z-index: -1;
   border-radius: inherit;
-
-  /* Use CSS @supports to provide fallbacks */
-  /* background: var(--blur-bg-light); */
 }
 
 /* Blur strength variations */
@@ -877,25 +866,6 @@ footer p {
 .blur-lg::before {
   backdrop-filter: blur(var(--blur-strength-lg));
   -webkit-backdrop-filter: blur(var(--blur-strength-lg));
-}
-
-/* Fallback for browsers that don't support backdrop-filter */
-@supports not (backdrop-filter: blur(1px)) {
-  .blur-background::before {
-    /* background: var(--blur-bg-medium); */
-  }
-
-  .blur-sm::before {
-    /* background: var(--blur-bg-light); */
-  }
-
-  .blur-md::before {
-    /* background: var(--blur-bg-medium); */
-  }
-
-  .blur-lg::before {
-    /* background: var(--blur-bg-dark); */
-  }
 }
 
 /* Performance optimizations */
