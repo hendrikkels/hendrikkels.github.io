@@ -818,11 +818,9 @@ footer p {
 /* New class for gradient border */
 .card-border {
   border: 0px solid var(--border-color);
-  /* border: 1px solid red; */
 }
 
 /* New class for gradient border */
 .tag-border {
-  border: 0px solid var(--border-color);
-  /* border: 1px solid blue; */
+  border: 0.2px solid var(--border-color);
 }
