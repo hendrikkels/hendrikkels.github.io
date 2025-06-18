@@ -1,421 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hendrik van Heerden - Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body>
-  <div class="backdrop"></div>
-
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="blur-background blur-lg">
-      <div class="nav-content">
-        <div class="logo">Hendrik van Heerden</div>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hendrik van Heerden - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <!-- Removed the <style> block -->
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container navbar-container">
+        <a href="#" class="navbar-logo"></a>
+        <div class="navbar-links">
+          <a href="#about" class="navbar-link">About</a>
+          <a href="#skills" class="navbar-link">Skills</a>
+          <a href="#experience" class="navbar-link">Experience</a>
+          <a href="#education" class="navbar-link">Education</a>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-    </div>
-  </nav>
-
-
-
-  <!-- Hero Section -->
-  <section id="home" class="hero blur-background blur-lg">
-    <div class="hero-content">
-      <h1>
-        <span class="greeting">Hi, I'm</span>
-        <span class="name">
-          <span class="firstname">Hendrik</span>
-          <span class="surname">van Heerden</span>
-        </span>
-      </h1>
-      <p class="tagline">Full Stack Developer | Designer | Software Engineer</p>
-      <button class="cta-button" data-scroll-to="contact">Get in Touch</button>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <div class="card card-border blur-background blur-md">
-        <div class="about-paragraphs">
-          <p>
-            As a Full Stack Software Engineer, I bring a comprehensive skill set
-            that spans software development, data analytics, architecture,
-            consulting, and business intelligence. My passion lies in crafting
-            scalable and robust software solutions using cutting-edge
-            technologies and frameworks.
-          </p>
-          <p>
-            With a proven track record in technical problem-solving, I excel at
-            identifying and resolving complex challenges while maintaining a
-            focus on delivering high-quality solutions. My experience
-            encompasses both front-end and back-end development, allowing me to
-            build seamless, end-to-end applications.
-          </p>
-          <p>
-            What sets me apart is my ability to combine technical expertise with
-            strong communication skills. I thrive in collaborative environments,
-            working effectively with cross-functional teams to transform ideas
-            into reality. Whether it's architecting new solutions or optimizing
-            existing systems, I'm committed to delivering excellence in every
-            project.
+    </nav>
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="hero-name-part">Hendrik</span>
+            <span class="hero-name-part">van</span>
+            <span class="hero-name-part">Heerden</span>
+          </h1>
+          <h2 class="hero-subtitle">B.Sc. Computer Science</h2>
+          <p class="hero-description">
+            Full stack software engineer with experience in software
+            development, data analytics, architecture, consulting and business
+            intelligence. Proven experience in integrating various technologies
+            and frameworks to build scalable and robust software solutions.
           </p>
         </div>
       </div>
-      <div class="buzzword-tags">
-        <span class="tag tag-border blur-background blur-md">JavaScript</span>
-        <span class="tag tag-border blur-background blur-md">React</span>
-        <span class="tag tag-border blur-background blur-md">Node.js</span>
-        <span class="tag tag-border blur-background blur-md">Python</span>
-        <span class="tag tag-border blur-background blur-md">Data Analytics</span>
-        <span class="tag tag-border blur-background blur-md">SQL</span>
-        <span class="tag tag-border blur-background blur-md">Cloud Architecture</span>
-        <span class="tag tag-border blur-background blur-md">Consulting</span>
+    </section>
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">Biography</h2>
+        <p>
+          Full stack software engineer with experience in software development,
+          data analytics, architecture, consulting and business intelligence.
+          Proven experience in integrating various technologies and frameworks
+          to build scalable and robust software solutions. Strong
+          problem-solving skills, with a keen ability to identify and resolve
+          complex technical issues. Excellent communication and interpersonal
+          skills, able to work effectively in a team environment.
+        </p>
       </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills & Expertise</h2>
-    <div class="skills-container">
-      <div class="skills-grid">
-        <div class="card card-border blur-background blur-md">
-          <div class="category-header">
-            <i class="fas fa-code"></i>
-            <span>Programming Languages</span>
+    </section>
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills & Certifications</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3 class="skill-category-title">Languages</h3>
+            <div class="skill-list">
+              <span class="skill-item">JavaScript</span>
+              <span class="skill-item">TypeScript</span>
+              <span class="skill-item">Python</span>
+              <span class="skill-item">C</span>
+              <span class="skill-item">Java</span>
+              <span class="skill-item">Swift</span>
+              <span class="skill-item">PHP</span>
+              <span class="skill-item">Assembly</span>
+              <span class="skill-item">Haskell</span>
+              <span class="skill-item">Rust</span>
+            </div>
           </div>
-          <div class="skills-list">
-            <span class="tag tag-border blur-background blur-md">JavaScript</span>
-            <span class="tag tag-border blur-background blur-md">TypeScript</span>
-            <span class="tag tag-border blur-background blur-md">Python</span>
-            <span class="tag tag-border blur-background blur-md">C/C#</span>
-            <span class="tag tag-border blur-background blur-md">Java</span>
-            <span class="tag tag-border blur-background blur-md">Swift</span>
-            <span class="tag tag-border blur-background blur-md">PHP</span>
-            <span class="tag tag-border blur-background blur-md">Rust</span>
-            <span class="tag tag-border blur-background blur-md">Assembly</span>
-            <span class="tag tag-border blur-background blur-md">Haskell</span>
-
+          <div class="skill-category">
+            <h3 class="skill-category-title">Frameworks</h3>
+            <div class="skill-list">
+              <span class="skill-item">Node.js</span>
+              <span class="skill-item">React</span>
+              <span class="skill-item">React Native</span>
+              <span class="skill-item">Angular</span>
+              <span class="skill-item">Express.js</span>
+              <span class="skill-item">Next.js</span>
+              <span class="skill-item">Flask</span>
+              <span class="skill-item">Django</span>
+            </div>
           </div>
-        </div>
-
-        <div class="card card-border blur-background blur-md">
-          <div class="category-header">
-            <i class="fas fa-layer-group"></i>
-            <span>Frameworks & Libraries</span>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Cloud Services</h3>
+            <div class="skill-list">
+              <span class="skill-item">Microsoft Azure</span>
+              <span class="skill-item">Amazon Web Services (AWS)</span>
+              <span class="skill-item">Google Cloud Platform (GCP)</span>
+            </div>
           </div>
-          <div class="skills-list">
-            <span class="tag tag-border blur-background blur-md">Node.js</span>
-            <span class="tag tag-border blur-background blur-md">React</span>
-            <span class="tag tag-border blur-background blur-md">React Native</span>
-            <span class="tag tag-border blur-background blur-md">Angular</span>
-            <span class="tag tag-border blur-background blur-md">Express.js</span>
-            <span class="tag tag-border blur-background blur-md">Next.js</span>
-            <span class="tag tag-border blur-background blur-md">Flask</span>
-            <span class="tag tag-border blur-background blur-md">Spring</span>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Databases</h3>
+            <div class="skill-list">
+              <span class="skill-item">SQL Server</span>
+              <span class="skill-item">MySQL</span>
+              <span class="skill-item">SQLite</span>
+              <span class="skill-item">MongoDB</span>
+              <span class="skill-item">GraphQL</span>
+              <span class="skill-item">Postgres</span>
+            </div>
           </div>
-        </div>
-
-        <div class="card card-border blur-background blur-md">
-          <div class="category-header">
-            <i class="fas fa-tools"></i>
-            <span>Tools & Platforms</span>
+          <div class="skill-category">
+            <h3 class="skill-category-title">ERP Systems</h3>
+            <div class="skill-list">
+              <span class="skill-item">SAP</span>
+              <span class="skill-item">Oracle</span>
+              <span class="skill-item">Sage</span>
+            </div>
           </div>
-          <div class="skills-list">
-            <span class="tag tag-border blur-background blur-md">Git</span>
-            <span class="tag tag-border blur-background blur-md">SharePoint</span>
-            <span class="tag tag-border blur-background blur-md">Jira</span>
-            <span class="tag tag-border blur-background blur-md">ClickUp</span>
-            <span class="tag tag-border blur-background blur-md">PowerApps</span>
-            <span class="tag tag-border blur-background blur-md">PowerBI</span>
-            <span class="tag tag-border blur-background blur-md">ServiceNow</span>
-            <span class="tag tag-border blur-background blur-md">Oracle</span>
-            <span class="tag tag-border blur-background blur-md">Slack</span>
-          </div>
-        </div>
-
-        <div class="card card-border blur-background blur-md">
-          <div class="category-header">
-            <i class="fas fa-cloud"></i>
-            <span>Cloud Services</span>
-          </div>
-          <div class="skills-list">
-            <span class="tag tag-border blur-background blur-md">Microsoft Azure</span>
-            <span class="tag tag-border blur-background blur-md">Amazon Web Services (AWS)</span>
-            <span class="tag tag-border blur-background blur-md">Google Cloud Platform (GCP)</span>
-          </div>
-        </div>
-
-        <div class="card card-border blur-background blur-md">
-          <div class="category-header">
-            <i class="fas fa-database"></i>
-            <span>Databases</span>
-          </div>
-          <div class="skills-list">
-            <span class="tag tag-border blur-background blur-md">SQL</span>
-            <span class="tag tag-border blur-background blur-md">MySQL</span>
-            <span class="tag tag-border blur-background blur-md">SQLite</span>
-            <span class="tag tag-border blur-background blur-md">MongoDB</span>
-            <span class="tag tag-border blur-background blur-md">GraphQL</span>
-            <span class="tag tag-border blur-background blur-md">PostgreSQL</span>
-          </div>
-        </div>
-
-        <div class="card card-border blur-background blur-md">
-          <div class="category-header">
-            <i class="fas fa-industry"></i>
-            <span>Industry Experience</span>
-          </div>
-          <div class="skills-list">
-            <span class="tag tag-border blur-background blur-md">Banking</span>
-            <span class="tag tag-border blur-background blur-md">Finance</span>
-            <span class="tag tag-border blur-background blur-md">Mining</span>
-            <span class="tag tag-border blur-background blur-md">Crypto</span>
-            <span class="tag tag-border blur-background blur-md">Audit</span>
-            <span class="tag tag-border blur-background blur-md">Retail</span>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Tools</h3>
+            <div class="skill-list">
+              <span class="skill-item">Git</span>
+              <span class="skill-item">Sharepoint</span>
+              <span class="skill-item">Jira</span>
+              <span class="skill-item">ClickUp</span>
+              <span class="skill-item">Power Apps</span>
+              <span class="skill-item">PowerBI</span>
+              <span class="skill-item">ServiceNow</span>
+              <span class="skill-item">Oracle</span>
+              <span class="skill-item">Slack</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-timeline">
+          <div class="experience-item">
+            <div class="experience-header">
+                              <span class="experience-position">Manager (Data Lead)</span>
+              <span class="experience-company">Pricewaterhouse Coopers</span>
 
-  <!-- Experience Section -->
-  <section id="experience">
-    <h2>Professional Experience</h2>
+              <span class="experience-date">Jun 2023 - Present</span>
+            </div>
+            <div class="experience-highlights">
+              <div class="experience-highlight">
+                Architected and led development of a large-scale data analytics
+                platform using Node.js, enabling secure data processing through
+                mirrored client environments, eliminating direct access
+                requirements while maintaining data integrity.
+              </div>
+              <div class="experience-highlight">
+                Designed and implemented ETL pipelines in Python for various
+                data sources, with particular focus on SAP systems, creating
+                synchronized MSSQL databases and data repositories that enabled
+                real-time analytics operations and reporting.
+              </div>
+              <div class="experience-highlight">
+                Built and maintained diverse analytics solutions combining
+                Python, MSSQL, and visualization tools to help clients derive
+                actionable insights from complex ERP data, improving their
+                decision-making capabilities.
+              </div>
+              <div class="experience-highlight">
+                Developed custom machine learning models using Spark pipelines
+                for OCR document processing, creating an automated solution for
+                contract analysis that significantly improved data extraction
+                efficiency.
+              </div>
+              <div class="experience-highlight">
+                Assessed and provided strategic recommendations for enterprise
+                data architecture, notably for a major banking client's data
+                warehouse implementation to enable automated analytics
+                capabilities.
+              </div>
+            </div>
+          </div>
+          <div class="experience-item">
+            <div class="experience-header">
+              <span class="experience-position">Software Engineer</span>
 
-    <div class="experience-timeline">
-      <div class="experience-entry">
-        <div class="card card-border blur-background blur-md">
-          <div class="experience-header">
-            <div class="company-name">PwC</div>
-            <div class="position">Manager, Data Analytics Consulting</div>
-            <div class="date-range">June 2023 - Present</div>
+              <span class="experience-company">Methys Digital</span>
+              <div class="experience-date">Jan 2021 - May 2023</div>
+            </div>
+            <div class="experience-highlights">
+              <div class="experience-highlight">
+                Led full stack development initiatives using React and React
+                Native, while protecting backend systems with PHP, TypeScript,
+                and Node.js to deliver scalable enterprise solutions.
+              </div>
+              <div class="experience-highlight">
+                Established and maintained robust API architectures and system
+                integrations across multiple languages (Python, Java,
+                TypeScript), ensuring seamless workflow and optimal performance.
+              </div>
+              <div class="experience-highlight">
+                Spearheaded technical documentation and requirements gathering
+                as Systems Architect, translating business needs into
+                comprehensive technical specifications while managing projects
+                using Agile methodologies.
+              </div>
+              <div class="experience-highlight">
+                Designed and implemented AWS infrastructure and CI/CD pipelines,
+                optimizing deployment processes and establishing reliable
+                cloud-based application environments.
+              </div>
+            </div>
           </div>
-          <div class="experience-description">
-            <ul>
-              <li>
-                Led development of a large-scale web-based data analytics
-                platform using <span class="highlight-text">Node.js</span>,
-                enabling mirrored client data environments for complex analytics
-                routines without direct client environment access.
-              </li>
-              <li>
-                Developed custom analytics solutions using
-                <span class="highlight-text">Python</span> and
-                <span class="highlight-text">SQL</span> to enhance SAP data
-                visualization capabilities, improving client engagement and ERP
-                system understanding.
-              </li>
-              <li>
-                Implemented cloud-based data pipelines using
-                <span class="highlight-text">Azure</span> to enhance data
-                processing efficiency and real-time analytics capabilities.
-              </li>
-              <li>
-                Created a robust document digitization tool using machine
-                learning models for Optical Character Recognition, streamlining
-                contract analysis processes.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="experience-entry">
-        <div class="card card-border blur-background blur-md">
-          <div class="experience-header">
-            <div class="company-name">Methys Digital</div>
-            <div class="position">Software Engineer</div>
-            <div class="date-range">January 2021 - March 2023</div>
-          </div>
-          <div class="experience-description">
-            <ul>
-              <li>
-                Drove application development using
-                <span class="highlight-text">React</span>,
-                <span class="highlight-text">React Native</span>,
-                <span class="highlight-text">Swift</span>, and
-                <span class="highlight-text">Java</span> to create tailored
-                software solutions.
-              </li>
-              <li>
-                Designed and maintained full-stack systems and APIs using
-                <span class="highlight-text">PHP</span>,
-                <span class="highlight-text">TypeScript</span>,
-                <span class="highlight-text">Node.js</span>,
-                <span class="highlight-text">Python</span>, and
-                <span class="highlight-text">Java</span>.
-              </li>
-              <li>
-                Performed Systems Architect and Business Analyst duties,
-                creating Business Requirement documents and managing Agile
-                projects.
-              </li>
-              <li>
-                Gained DevOps expertise through
-                <span class="highlight-text">AWS</span> server instance setup
-                and deployment pipeline management.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="experience-entry">
-        <div class="card card-border blur-background blur-md">
-          <div class="experience-header">
-            <div class="company-name">Keller Williams Emboss</div>
-            <div class="position">Software Engineer Intern</div>
-            <div class="date-range">March 2020 - September 2020</div>
-          </div>
-          <div class="experience-description">
-            <ul>
-              <li>
-                Provided CRM system training and collaborated on development of
-                a new CRM web application to enhance agent lead access.
-              </li>
-              <li>
-                Designed user-friendly CRM platform focusing on comprehensive
-                lead data management for real estate and auctions.
-              </li>
-              <li>
-                Analyzed lead conversion rates to drive system improvements and
-                enhance overall effectiveness.
-              </li>
-              <li>
-                Collaborated with market center agents to tailor CRM system
-                features to specific requirements.
-              </li>
-            </ul>
+          <div class="experience-item">
+            <div class="experience-header">
+              <span class="experience-position">Consultant</span>
+              <span class="experience-company">Keller Williams Emboss</span>
+              <div class="experience-date">May 2020 - Sept 2020</div>
+            </div>
+            <div class="experience-highlights">
+              <div class="experience-highlight">
+                Led the design and implementation of a comprehensive CRM web
+                application, focusing on data architecture and integration to
+                optimize lead management for real estate and auction operations.
+              </div>
+              <div class="experience-highlight">
+                Developed data models and analytics frameworks to track lead
+                conversion metrics, implementing improvements that enhanced
+                system effectiveness based on quantitative insights.
+              </div>
+              <div class="experience-highlight">
+                Collaborated with stakeholders to gather requirements and
+                translate business needs into technical applications, ensuring
+                the CRM platform effectively served diverse user requirements.
+              </div>
+              <div class="experience-highlight">
+                Established data quality standards and user-friendly interfaces
+                for lead management, creating efficient workflows that improved
+                data accuracy and accessibility.
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="experience-entry">
-        <div class="card card-border blur-background blur-md">
-          <div class="experience-header">
-            <div class="company-name">Sanlam Investments</div>
-            <div class="position">Software Engineer Intern</div>
-            <div class="date-range">January 2019 - February 2019</div>
-          </div>
-          <div class="experience-description">
-            <ul>
-              <li>
-                Developed a web application using <span class="highlight-text">Python</span>, <span
-                  class="highlight-text">Django</span>, and <span class="highlight-text">PHP</span> to automate and
-                streamline enterprise backup processes.
-              </li>
-              <li>
-                Implemented secure backup management features for large-scale company data systems, focusing on
-                automation
-                and reliability.
-              </li>
-              <li>
-                Enhanced backup and restoration workflows through intuitive web interface development and process
-                automation.
-              </li>
-              <li>
-                Collaborated with IT teams to gather requirements and optimize solutions for company-specific backup
-                needs.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Education Section -->
-  <section id="education">
-    <h2>Education</h2>
-    <div class="education-grid">
-      <div class="card card-border blur-background blur-md">
-        <div class="institution">Stellenbosch University</div>
-        <div class="degree">B.Sc. Computer Science (Honors)</div>
-        <div class="major">GPA: 3.36/4.0</div>
-
-        <div class="achievements">
-          <h4>Thesis Project</h4>
-          <p>
-            Designed and implemented a stocktaking web application and API for
-            inventory management, built in
-            <span class="highlight-text">Python</span> using the
-            <span class="highlight-text">Django</span> templating engine and
-            <span class="highlight-text">Python-Flask</span> web server.
-          </p>
-
-          <h4>Key Subjects</h4>
-          <div class="subjects-grid">
-            <span class="tag tag-border blur-background blur-md">Computer Science</span>
-            <span class="tag tag-border blur-background blur-md">Machine Learning</span>
-            <span class="tag tag-border blur-background blur-md">Computational Intelligence</span>
-            <span class="tag tag-border blur-background blur-md">Advanced Algorithms</span>
-            <span class="tag tag-border blur-background blur-md">Data Mining</span>
-            <span class="tag tag-border blur-background blur-md">Functional Programming</span>
-            <span class="tag tag-border blur-background blur-md">Operations Research</span>
-            <span class="tag tag-border blur-background blur-md">Scientific Computing</span>
-            <span class="tag tag-border blur-background blur-md">Probability Theory & Statistics</span>
-            <span class="tag tag-border blur-background blur-md">Mathematics</span>
-            <span class="tag tag-border blur-background blur-md">Physics</span>
+    </section>
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="education-timeline">
+          <div class="education-item">
+            <div class="education-header">
+              <div class="education-title">
+                <h3 class="education-degree">
+                  B.Sc. Computer Science
+                </h3>
+                <span class="education-university"
+                  >Stellenbosch University</span
+                >
+              </div>
+              <div class="education-date">Dec 2020</div>
+            </div>
+            <div class="education-details">
+              <div class="education-detail">GPA: 3.36/4.0</div>
+              <div class="education-detail">
+                Thesis project: Designed and implemented a stocktaking web
+                application and API for inventory management, built in Python
+                using the Django templating engine and Python-Flask web server.
+              </div>
+              <div class="education-detail">
+                Subjects: Computer Science, Machine Learning, Computational
+                Intelligence, Advanced Algorithms, Data Mining, Functional
+                Programming, Operations Research, Scientific Computing,
+                Probability Theory & Statistics, Mathematics, Physics
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Get in Touch</h2>
-    <div class="contact-content">
-      <div class="contact-info">
-        <div class="contact-item border blur-background blur-lg">
-          <a href="mailto:hendrikkels@icloud.com">
-            <i class="far fa-envelope"></i>
-            <span>Email</span>
-          </a>
-        </div>
-        <div class="contact-item border blur-background blur-lg">
-          <a href="https://github.com/hendrikkels" target="_blank">
-            <i class="fab fa-github"></i>
-            <span>GitHub</span>
-          </a>
-        </div>
-        <div class="contact-item border blur-background blur-lg">
-          <a href="https://www.linkedin.com/in/hjovanheerden/" target="_blank">
-            <i class="fab fa-linkedin"></i>
-            <span>LinkedIn</span>
-          </a>
+    </section>
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="w-6 h-6 flex items-center justify-center">
+              <i class="ri-map-pin-line"></i>
+            </div>
+            <span>United States of America</span>
+          </div>
+          <div class="contact-item">
+            <div class="w-6 h-6 flex items-center justify-center">
+              <i class="ri-mail-line"></i>
+            </div>
+            <a href="mailto:hendrikvanh@cloud.com" class="text-white"
+              >hendrikkels@icloud.com</a
+            >
+          </div>
+          <div class="contact-item">
+            <div class="w-6 h-6 flex items-center justify-center">
+              <i class="ri-phone-line"></i>
+            </div>
+            <a href="tel:(+27)714936363" class="text-white">(+27) 71 493 6363</a>
+          </div>
+          <div class="contact-item">
+            <div class="w-6 h-6 flex items-center justify-center">
+              <i class="ri-linkedin-line"></i>
+            </div>
+            <a href="https://linkedin.com/in/hjovanheerden" class="text-white"
+              >linkedin.com/in/hvanheerden</a
+            >
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <footer class="blur-background blur-lg">
-    <p>&copy; 2024 Hendrik van Heerden. All rights reserved.</p>
-  </footer>
-
-  <script src="js/main.js"></script>
-</body>
-
+    </section>
+    <script src="scripts/main.js"></script>
+  </body>
 </html>
