@@ -3,14 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hendrik van Heerden - Portfolio</title>
+    <title>Hendrik van Heerden</title>
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
@@ -39,18 +35,13 @@
     <section id="hero" class="hero">
       <div class="container">
         <div class="hero-content">
+
           <h1 class="hero-title">
             <span class="hero-name-part">Hendrik</span>
             <span class="hero-name-part">van</span>
             <span class="hero-name-part">Heerden</span>
+                      <h2 class="hero-subtitle">B.Sc. Computer Science</h2>
           </h1>
-          <h2 class="hero-subtitle">B.Sc. Computer Science</h2>
-          <p class="hero-description">
-            Full stack software engineer with experience in software
-            development, data analytics, architecture, consulting and business
-            intelligence. Proven experience in integrating various technologies
-            and frameworks to build scalable and robust software solutions.
-          </p>
         </div>
       </div>
     </section>
@@ -70,7 +61,7 @@
     </section>
     <section id="skills" class="section">
       <div class="container">
-        <h2 class="section-title">Skills & Certifications</h2>
+        <h2 class="section-title">Skills</h2>
         <div class="skills-grid">
           <div class="skill-category">
             <h3 class="skill-category-title">Languages</h3>
@@ -120,24 +111,28 @@
             </div>
           </div>
           <div class="skill-category">
-            <h3 class="skill-category-title">ERP Systems</h3>
+            <h3 class="skill-category-title">Data Engineering</h3>
             <div class="skill-list">
+              <span class="skill-item">Databricks</span>
+              <span class="skill-item">Microsoft Fabric</span>
+              <span class="skill-item">Snowlfake</span>
               <span class="skill-item">SAP</span>
               <span class="skill-item">Oracle</span>
               <span class="skill-item">Sage</span>
+              <span class="skill-item">Visio</span>
+              <span class="skill-item">Oracle</span>
+              <span class="skill-item">PowerBI</span>
             </div>
           </div>
           <div class="skill-category">
-            <h3 class="skill-category-title">Tools</h3>
+            <h3 class="skill-category-title">Software Developement</h3>
             <div class="skill-list">
               <span class="skill-item">Git</span>
               <span class="skill-item">Sharepoint</span>
               <span class="skill-item">Jira</span>
               <span class="skill-item">ClickUp</span>
               <span class="skill-item">Power Apps</span>
-              <span class="skill-item">PowerBI</span>
               <span class="skill-item">ServiceNow</span>
-              <span class="skill-item">Oracle</span>
               <span class="skill-item">Slack</span>
             </div>
           </div>
@@ -150,10 +145,11 @@
         <div class="experience-timeline">
           <div class="experience-item">
             <div class="experience-header">
-                              <span class="experience-position">Manager (Data Lead)</span>
-              <span class="experience-company">Pricewaterhouse Coopers</span>
-
-              <span class="experience-date">Jun 2023 - Present</span>
+              <span class="experience-position">Manager</span>
+              <div class="flex w-full justify-between">
+                <span class="experience-company">PwC South Africa</span>
+                <span class="experience-date">Jun 2023 - Present</span>
+              </div>
             </div>
             <div class="experience-highlights">
               <div class="experience-highlight">
@@ -191,9 +187,10 @@
           <div class="experience-item">
             <div class="experience-header">
               <span class="experience-position">Software Engineer</span>
-
-              <span class="experience-company">Methys Digital</span>
-              <div class="experience-date">Jan 2021 - May 2023</div>
+              <div class="flex w-full justify-between">
+                <span class="experience-company">Methys Digital</span>
+                <div class="experience-date">Jan 2021 - May 2023</div>
+              </div>
             </div>
             <div class="experience-highlights">
               <div class="experience-highlight">
@@ -221,9 +218,11 @@
           </div>
           <div class="experience-item">
             <div class="experience-header">
-              <span class="experience-position">Consultant</span>
-              <span class="experience-company">Keller Williams Emboss</span>
-              <div class="experience-date">May 2020 - Sept 2020</div>
+              <span class="experience-position">Software Consultant</span>
+              <div class="flex w-full justify-between">
+                <span class="experience-company">Keller Williams</span>
+                <div class="experience-date">May 2020 - Sep 2020</div>
+              </div>
             </div>
             <div class="experience-highlights">
               <div class="experience-highlight">
@@ -257,18 +256,15 @@
         <div class="education-timeline">
           <div class="education-item">
             <div class="education-header">
-              <div class="education-title">
-                <h3 class="education-degree">
-                  B.Sc. Computer Science
-                </h3>
-                <span class="education-university"
-                  >Stellenbosch University</span
-                >
+              <h3 class="education-degree">B.Sc. Computer Science</h3>
+              <div class="flex w-full justify-between">
+                <span class="education-university">
+                  Stellenbosch University
+                </span>
+                <div class="education-date">Dec 2020</div>
               </div>
-              <div class="education-date">Dec 2020</div>
             </div>
             <div class="education-details">
-              <div class="education-detail">GPA: 3.36/4.0</div>
               <div class="education-detail">
                 Thesis project: Designed and implemented a stocktaking web
                 application and API for inventory management, built in Python
@@ -307,7 +303,9 @@
             <div class="w-6 h-6 flex items-center justify-center">
               <i class="ri-phone-line"></i>
             </div>
-            <a href="tel:(+27)714936363" class="text-white">(+27) 71 493 6363</a>
+            <a href="tel:(+27)714936363" class="text-white"
+              >(+27) 71 493 6363</a
+            >
           </div>
           <div class="contact-item">
             <div class="w-6 h-6 flex items-center justify-center">
