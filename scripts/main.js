@@ -72,3 +72,100 @@ function adjustHeroTitle() {
 
 window.addEventListener('DOMContentLoaded', adjustHeroTitle);
 window.addEventListener('resize', adjustHeroTitle);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const name = document.getElementById("hero-name");
+  const surname = document.getElementById("hero-surname");
+  const subtitle1 = document.getElementById("hero-subtitle-1");
+  const subtitle2 = document.getElementById("hero-subtitle-2");
+  const subtitle3 = document.getElementById("hero-subtitle-3");
+  const subtitle4 = document.getElementById("hero-subtitle-4");
+
+  if (name && surname && subtitle1 && subtitle2 && subtitle3 && subtitle4) {
+    name.classList.remove("visible");
+    surname.classList.remove("visible");
+    [subtitle1, subtitle2, subtitle3, subtitle4].forEach(sub => {
+      sub.classList.remove("visible", "fade-out");
+      sub.style.display = "none";
+    });
+    subtitle1.style.display = "";
+
+    setTimeout(() => {
+      name.classList.add("visible");
+      setTimeout(() => {
+        surname.classList.add("visible");
+        setTimeout(() => {
+          // Subtitle 1 fade in
+          subtitle1.classList.add("visible");
+          setTimeout(() => {
+            // Subtitle 1 fade out
+            subtitle1.classList.add("fade-out");
+            setTimeout(() => {
+              subtitle1.classList.remove("visible", "fade-out");
+              subtitle1.style.display = "none";
+              // Subtitle 2 fade in
+              subtitle2.style.display = "";
+              setTimeout(() => {
+                subtitle2.classList.add("visible");
+                setTimeout(() => {
+                  // Subtitle 2 fade out
+                  subtitle2.classList.add("fade-out");
+                  setTimeout(() => {
+                    subtitle2.classList.remove("visible", "fade-out");
+                    subtitle2.style.display = "none";
+                    // Subtitle 3 fade in
+                    subtitle3.style.display = "";
+                    setTimeout(() => {
+                      subtitle3.classList.add("visible");
+                      setTimeout(() => {
+                        // Subtitle 3 fade out
+                        subtitle3.classList.add("fade-out");
+                        setTimeout(() => {
+                          subtitle3.classList.remove("visible", "fade-out");
+                          subtitle3.style.display = "none";
+                          // Subtitle 4 fade in and persist
+                          subtitle4.style.display = "";
+                          setTimeout(() => {
+                            subtitle4.classList.add("visible");
+                          }, 10);
+                        }, 1200); // fade out duration
+                      }, 3500); // subtitle 3 visible duration
+                    }, 10);
+                  }, 1200); // fade out duration
+                }, 3500); // subtitle 2 visible duration
+              }, 10);
+            }, 1200); // fade out duration
+          }, 3500); // subtitle 1 visible duration
+        }, 400);
+      }, 400);
+    }, 400);
+  }
+});
+
+// Contact copy-to-clipboard interactivity
+
+document.addEventListener("DOMContentLoaded", function () {
+  const copyBtns = document.querySelectorAll('.copy-btn');
+  copyBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      const value = btn.getAttribute('data-copy');
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(value);
+      } else {
+        // fallback for older browsers
+        const temp = document.createElement('input');
+        temp.value = value;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        document.body.removeChild(temp);
+      }
+      btn.classList.add('copied');
+      btn.title = 'Copied!';
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.title = 'Copy';
+      }, 1200);
+    });
+  });
+});
