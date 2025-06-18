@@ -2,15 +2,31 @@
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
   const navbarLinks = document.querySelector(".navbar-links");
+  const navLinks = document.querySelectorAll(".navbar-link");
+
   hamburger.addEventListener("click", function () {
     this.classList.toggle("open");
     navbarLinks.classList.toggle("open");
+
+    if (navbarLinks.classList.contains("open")) {
+      navLinks.forEach((link, i) => {
+        link.classList.remove("menu-animate-in");
+        setTimeout(() => {
+          link.classList.add("menu-animate-in");
+        }, i * 100); // Remove the initial 10ms delay
+      });
+    } else {
+      navLinks.forEach((link) => {
+        link.classList.remove("menu-animate-in");
+      });
+    }
   });
-  const navLinks = document.querySelectorAll(".navbar-link");
+
   navLinks.forEach((link) => {
     link.addEventListener("click", function () {
       hamburger.classList.remove("open");
       navbarLinks.classList.remove("open");
+      navLinks.forEach((l) => l.classList.remove("menu-animate-in"));
     });
   });
 });

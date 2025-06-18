@@ -190,7 +190,7 @@ body {
   font-weight: 800;
   margin-bottom: var(--space-md);
   line-height: 1;
-  letter-spacing: -0.04em;  
+  letter-spacing: -0.04em;
   -webkit-background-clip: text;
   white-space: nowrap;
   overflow: hidden;
@@ -410,6 +410,7 @@ body {
     text-align: left;
     width: 100%;
     padding: var(--space-md) 0;
+    opacity: 0;
   }
   .hamburger {
     display: block;
@@ -419,6 +420,24 @@ body {
   }
   .section-title {
     font-size: 2rem;
+  }
+  .navbar-links.open .navbar-link {
+    transform: translateX(10px);
+    pointer-events: none;
+  }
+  .navbar-links.open .navbar-link.menu-animate-in {
+    animation: nav-link-slide-in 0.2s linear forwards;
+    pointer-events: auto;
+  }
+  @keyframes nav-link-slide-in {
+    from {
+      opacity: 0;
+      transform: translateX(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 }
 @media (max-width: 480px) {
