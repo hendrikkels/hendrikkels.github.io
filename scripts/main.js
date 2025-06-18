@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetId = this.getAttribute("href");
       const targetElement = document.querySelector(targetId);
       window.scrollTo({
-        top: targetElement.offsetTop - 40,
+        top: targetElement.offsetTop ,
         behavior: "smooth",
       });
     });
