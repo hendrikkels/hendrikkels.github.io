@@ -3,14 +3,25 @@
 }
 @import url("https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;600;700&display=swap");
 :root {
-  --color-primary: #2ea9eb;
-  --color-secondary: #b589ec;
-  --color-tertiary: #dfec27;
+  --color-primary: #2997ff;
+  --color-secondary: #e658d1;
+  --color-tertiary: #b589ec;
   --color-light: #ffffff;
   --color-dark: #000000;
+
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-red: #f72a72;
+  --color-green: #ff6204;
+  --color-yellow: #dfec27;
+  --color-blue: #2997ff;
+  --color-magenta: #d760fc;
+  --color-cyan: #7affa8;
+
+  --color-text: #000000;
+  --color-background: #ffffff;
   --color-border: #80808080;
+
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
@@ -31,13 +42,12 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: var(--color-dark);
-  color: var(--color-white);
+  background-color: var(--color-background);
+  color: var(--color-text);
   line-height: 1.6;
 }
 .container {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--space-lg);
 }
@@ -61,10 +71,10 @@ body {
   color: var(--color-white);  */
 }
 .section-title {
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: 800;
   margin-bottom: var(--space-lg);
-  color: var(--color-white);
+  color: var(--color-text);
   display: inline-block;
   line-height: 4rem;
 }
@@ -78,6 +88,7 @@ body {
   backdrop-filter: blur(10px);
   padding: var(--space-md) 0;
   transition: all 0.3s ease;
+  background-color: transparent;
 }
 .navbar-container {
   display: flex;
@@ -95,7 +106,7 @@ body {
   gap: var(--space-lg);
 }
 .navbar-link {
-  color: var(--color-white);
+  color: var(--color-black);
   text-decoration: none;
   font-weight: 600;
   transition: opacity 0.3s ease;
@@ -122,6 +133,10 @@ body {
   left: 0;
   transform: rotate(0deg);
   transition: 0.25s ease-in-out;
+
+  /* box-sizing: content-box;
+  border: 2px solid var(--color-black); */
+  background-color: var(--color-text);
 }
 .hamburger span:nth-child(1) {
   top: 0px;
@@ -132,6 +147,9 @@ body {
 }
 .hamburger span:nth-child(4) {
   top: 18px;
+}
+.hamburger.open span {
+  background-color: var(--color-white);
 }
 .hamburger.open span:nth-child(1) {
   top: 9px;
@@ -186,8 +204,8 @@ body {
   overflow: visible;
 }
 .hero-title {
-  font-size: 6rem;
-  font-weight: 800;
+  font-size: 6.5rem;
+  font-weight: 900;
   margin-bottom: var(--space-md);
   line-height: 1;
   letter-spacing: -0.04em;
@@ -224,36 +242,27 @@ body {
   margin-bottom: var(--space-xl);
   max-width: 600px;
 }
-.contact-info {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-md);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-lg);
+/* Biography Section */
+.biography-paragraph {
+  padding: 0 var(--space-sm);
+  margin-bottom: var(--space-md);
+  text-align: justify;
 }
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-}
-.contact-item i {
-  color: var(--color-primary);
-  font-size: 1.2rem;
-}
+
 /* Skills Section */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
   gap: var(--space-xl);
 }
 .skill-category {
+  padding: 0 var(--space-sm);
 }
 .skill-category-title {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: var(--space-md);
-  color: var(--color-primary);
+  color: var(--color-text);
   letter-spacing: 0em;
 }
 .skill-list {
@@ -282,6 +291,7 @@ body {
 }
 .experience-item,
 .education-item {
+  padding: 0 var(--space-sm);
   background: none;
 }
 .experience-header,
@@ -306,7 +316,7 @@ body {
 .education-degree {
   font-size: 2rem;
   font-weight: 800;
-  color: var(--color-primary);
+  color: var(--color-text);
   letter-spacing: 0em;
 }
 .experience-company,
@@ -320,25 +330,24 @@ body {
 .education-date {
   font-size: 1rem;
   font-weight: 600;
-  background: var(--color-secondary);
+  background: var(--color-tertiary);
   color: var(--color-white);
-  padding: 0.1em 0.6em;
+  padding: 0.2em 0.6em;
   border-radius: var(--radius-sm);
   display: inline-block;
 }
 .experience-highlights,
 .education-details {
-  margin-top: var(--space-md);
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  padding-left: 0;
 }
 .experience-highlight,
 .education-detail {
   position: relative;
-  color: var(--color-white);
-  padding-left: var(--space-lg);
+  color: var(--color-text);
+  padding-left: 1.4rem;
+  text-align: justify;
 }
 .experience-highlight:before,
 .education-detail:before {
@@ -347,7 +356,8 @@ body {
   line-height: 0.75rem;
   height: 1rem;
   width: 1rem;
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
+  color: var(--color-white);
   text-align: center;
   left: 0rem;
   top: 0.25rem;
@@ -355,9 +365,26 @@ body {
   display: inline-block;
 }
 
+.contact-info {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.contact-item i {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+}
+
 .footer {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  color: var(--color-text);
   padding: var(--space-lg) 0;
   text-align: center;
 }
@@ -405,6 +432,9 @@ body {
   .navbar-links.open {
     right: 0;
   }
+  .navbar-links.open .navbar-link {
+    color: var(--color-white);
+  }
   .navbar-link {
     font-size: 3rem; /* Slightly bigger text */
     text-align: left;
@@ -447,11 +477,12 @@ body {
     align-items: flex-end;
   }
   .hero-title {
-    font-size: 4.5rem; /* Increase this value as needed */
+    font-size: 3rem; /* Increase this value as needed */
     line-height: 1;
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
   }
   .hero-subtitle {
+    font-size: 1rem;
     margin-bottom: var(--space-lg);
   }
   .section-title {

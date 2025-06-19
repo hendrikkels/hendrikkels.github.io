@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         link.classList.remove("menu-animate-in");
         setTimeout(() => {
           link.classList.add("menu-animate-in");
-        }, i * 100); // Remove the initial 10ms delay
+        }, i * 40); // Remove the initial 10ms delay
       });
     } else {
       navLinks.forEach((link) => {
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetId = this.getAttribute("href");
       const targetElement = document.querySelector(targetId);
       window.scrollTo({
-        top: targetElement.offsetTop ,
+        top: targetElement.offsetTop + 40 ,
         behavior: "smooth",
       });
     });
