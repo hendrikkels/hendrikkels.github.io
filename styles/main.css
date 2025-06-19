@@ -3,6 +3,16 @@
 }
 @import url("https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;600;700&display=swap");
 :root {
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 6rem;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
   --color-primary: #2997ff;
   --color-secondary: #e658d1;
   --color-tertiary: #b589ec;
@@ -19,20 +29,18 @@
   --color-magenta: #d760fc;
   --color-cyan: #7affa8;
 
+  --color-text: #ffffff;
+  --color-background: #000000;
+  --color-border: #80808080;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
   --color-text: #000000;
   --color-background: #ffffff;
-  --color-border: #80808080;
-
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 2rem;
-  --space-xl: 6rem;
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 16px;
-  --radius-full: 9999px;
+  }
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -494,3 +502,4 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
