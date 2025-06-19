@@ -389,14 +389,15 @@ body {
   text-align: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px) { 
+
   .experience-company,
   .education-university {
     font-size: 1rem;
   }
   .experience-position,
   .education-degree {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   .experience-date,
   .education-date {
@@ -477,12 +478,12 @@ body {
     align-items: flex-end;
   }
   .hero-title {
-    font-size: 3rem; /* Increase this value as needed */
+    font-size: 3.4rem; /* Increase this value as needed */
     line-height: 1;
     margin-bottom: var(--space-md);
   }
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: var(--space-lg);
   }
   .section-title {
