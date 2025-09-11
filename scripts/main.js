@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetId = this.getAttribute("href");
       const targetElement = document.querySelector(targetId);
       window.scrollTo({
-        top: targetElement.offsetTop + 40 ,
+        top: targetElement.offsetTop + 0 ,
         behavior: "smooth",
       });
     });
@@ -152,8 +152,8 @@ document.addEventListener("DOMContentLoaded", function () {
               }, 10);
             }, 1200); // fade out duration
           }, 3500); // subtitle 1 visible duration
-        }, 400);
-      }, 400);
+        }, 800);
+      }, 800);
     }, 400);
   }
 });
