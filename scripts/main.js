@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Section/experience/education scroll animations
+// Trigger when the top of the section enters the lower 20% of the viewport
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll(".section");
   const experienceItems = document.querySelectorAll(".experience-item");
@@ -44,7 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     },
-    { threshold: 0.1 }
+    {
+      root: null,
+      rootMargin: "0px 0px -20% 0px",
+      threshold: 0
+    }
   );
   sections.forEach((section) => {
     observer.observe(section);

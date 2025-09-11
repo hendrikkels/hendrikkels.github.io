@@ -65,7 +65,7 @@ body {
   padding: var(--space-xl) 0;
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 1.2s ease, transform 1.2s ease;
   position: relative;
 }
 .section.visible {
