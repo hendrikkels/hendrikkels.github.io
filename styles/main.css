@@ -116,7 +116,7 @@ body {
   gap: var(--space-lg);
 }
 .navbar-link {
-  color: var(--color-black);
+  color: var(--color-text);
   text-decoration: none;
   font-weight: 600;
   transition: opacity 0.3s ease;
